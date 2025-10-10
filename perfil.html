@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="stylesheet" href="./perfil.css">
+ 
+
+  <title>Pokedex</title>
+</head>
+<body>
+
+
+  <!--  Header  -->
+  <header class="header">
+    <nav class="header_Navbar">
+      <a class="header_Navbar__Title" href="index.html">le Pokedex</a>
+
+      <ul class="header_Navbar__List">
+        <a class="header_Navbar__List-Link" href="./pokedex.html">Pokedex</a>
+        <a class="header_Navbar__List-Link" href="./regioes.html">Regiões</a>
+        <a class="header_Navbar__List-Link" href="categorias.html">Categorias</a>
+        <a class="header_Navbar__List-Link" id="linkUser" href="perfil.html">
+          <img src="./assets/icon_user.svg"/>
+        </a>
+      </ul>
+
+    </nav>
+  </header>
+ 
+
+  <main>
+    <h2>Minha Conta</h2>
+
+    <p>Nome: xxxxxxxxxxxx &nbsp;&nbsp;&nbsp;&nbsp; Nascimento: XX/XX/XX</p>
+    <p>Gênero: XXXXXXXXXX</p>
+
+    <h3>Pokemon Favorito(s):</h3>
+
+    <div>
+       <section id="card-grid" class="card-grid" aria-live="polite" aria-label="Grade de pokemons">
+        <!-- Card 1 -->
+        <article class="card" role="article" aria-label="Bulbassaur">
+          <div class="meta">
+            <span class="num">#001</span>
+            <button class="fav" aria-label="Favoritar">☆</button>
+          </div>
+
+          <div class="sprite" aria-hidden="false">
+            <!-- SVG placeholder para sprite -->
+            <svg viewBox="0 0 64 64" width="72" height="72" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bulbassaur">
+              <rect fill="#7fbf3f" x="12" y="20" width="40" height="28" rx="4"></rect>
+              <circle cx="26" cy="34" r="4" fill="#2a6b1f"></circle>
+              <circle cx="38" cy="34" r="4" fill="#2a6b1f"></circle>
+            </svg>
+          </div>
+
+          <div class="name">Bulbassaur</div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card" role="article" aria-label="Bulbassaur">
+          <div class="meta">
+            <span class="num">#001</span>
+            <button class="fav" aria-label="Favoritar">☆</button>
+          </div>
+          <div class="sprite">
+            <svg viewBox="0 0 64 64" width="72" height="72" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bulbassaur">
+              <rect fill="#7fbf3f" x="12" y="20" width="40" height="28" rx="4"></rect>
+              <circle cx="26" cy="34" r="4" fill="#2a6b1f"></circle>
+              <circle cx="38" cy="34" r="4" fill="#2a6b1f"></circle>
+            </svg>
+          </div>
+          <div class="name">Bulbassaur</div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card" role="article" aria-label="Bulbassaur">
+          <div class="meta">
+            <span class="num">#001</span>
+            <button class="fav" aria-label="Favoritar">☆</button>
+          </div>
+          <div class="sprite">
+            <svg viewBox="0 0 64 64" width="72" height="72" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bulbassaur">
+              <rect fill="#7fbf3f" x="12" y="20" width="40" height="28" rx="4"></rect>
+              <circle cx="26" cy="34" r="4" fill="#2a6b1f"></circle>
+              <circle cx="38" cy="34" r="4" fill="#2a6b1f"></circle>
+            </svg>
+          </div>
+          <div class="name">Bulbassaur</div>
+        </article>
+    </div>
+  </main>
+
+</body>
+</html>

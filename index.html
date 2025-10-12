@@ -3,7 +3,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="./assets/favicon.png">
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/index.css">
   <title>Pokedex</title>
 </head>
 <body>
@@ -11,12 +12,12 @@
  <!--  Header  -->
   <header class="header">
     <nav class="header_Navbar">
-      <a class="header_Navbar__Title" href="index.html">le Pokedex</a>
+      <a class="header_Navbar__Title" href="./projeto.html">le Pokedex</a>
 
       <ul class="header_Navbar__List">
+        <a class="header_Navbar__List-Link" href="./index.html">Inicio</a>
         <a class="header_Navbar__List-Link" href="./pokedex.html">Pokedex</a>
         <a class="header_Navbar__List-Link" href="./regioes.html">Regiões</a>
-        <a class="header_Navbar__List-Link" href="categorias.html">Categorias</a>
         <a class="header_Navbar__List-Link" id="linkUser" href="perfil.html">
           <img src="./assets/icon_user.svg"/>
         </a>
@@ -27,6 +28,23 @@
 
   <!--  Main  -->
   <main class="main">
+
+
+    <!--  Search  -->
+    <section class="main_Search">
+      <section class="main_Search__Section">
+        <p class="main_Search__Section-Text">~Descubra mais sobre seus pokémons favoritos~</p>
+        <p class="main_Search__Section-Text">O que buscas por hoje?</p>
+      </section>
+
+      <section class="main_Search__SearchBox">
+        <input class="main_Search__SearchBox-Input" placeholder="Pesquisar Pokemon" type="text"> 
+        <img class="main_Search__SearchBox-Image" src="./assets/icon_search.svg"/>
+      </section>
+    </section>
+
+
+
     <!--  Cards  -->
     <section class="main_Cards">
       <ul class="main_Cards__List">
@@ -47,7 +65,7 @@
         </a>
 
         <a class="main_Cards__List-Card"href="pokedex.html" id="pokedex">
-          <img class="main_Cards__List-Card--Image" src="./assets/favicon.png"/>
+          <img class="main_Cards__List-Card--Image" src="./assets/icon_pokedex.svg"/>
           <p class="main_Cards__List-Card--Text">Pokedex</p>
         </a>
       </ul>

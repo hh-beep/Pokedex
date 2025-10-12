@@ -3,7 +3,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="./assets/favicon.png">
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/categorias.css">
   <title>Pokedex</title>
 </head>
 <body>
@@ -12,12 +13,12 @@
   <!--  Header  -->
   <header class="header">
     <nav class="header_Navbar">
-      <a class="header_Navbar__Title" href="index.html">le Pokedex</a>
+      <a class="header_Navbar__Title" href="./projeto.html">le Pokedex</a>
 
       <ul class="header_Navbar__List">
+        <a class="header_Navbar__List-Link" href="./index.html">Inicio</a>
         <a class="header_Navbar__List-Link" href="./pokedex.html">Pokedex</a>
         <a class="header_Navbar__List-Link" href="./regioes.html">Regiões</a>
-        <a class="header_Navbar__List-Link" href="categorias.html">Categorias</a>
         <a class="header_Navbar__List-Link" id="linkUser" href="perfil.html">
           <img src="./assets/icon_user.svg"/>
         </a>
@@ -26,21 +27,304 @@
     </nav>
   </header>
 
-  <h2>Pokemon: Charizard</h2>
 
-  <h3>Type:</h3>
-  <p>FIRE | FLYING</p>
 
-  <h3>Status:</h3>
-  <p>HP: 78</p>
-  <p>Attack: 84</p>
-  <p>Defense: 78</p>
-  <p>Speed: 100</p>
 
-  <h3>Fraqueza:</h3>
-  <p>ROCK | WATER | ELECTRIC</p>
 
-  <img src="charizard.png" alt="Imagem do Charizard">
+  <!--  Conteudo Principal  -->
+  <main class="main">
+    
+    <section class="main_Section">
+      <h1>Descubra as Principais Categorias</h1>
+    </section>
+
+
+    <ul class="main_List"> 
+
+      <!--  Cat1  -->
+      <li class="main_List__Category">
+        <!--  Tittle  -->
+        <section class="main_List__Category-Text">
+          <img class="main_List__Category-Text-Icon" src="./assets/categorys/fire.svg"/> <!--  Icone da Categoria  -->
+          <h2 class="main_List__Category-Text-Tittle">Fogo</h2>
+
+          <a href="./pokedex.html"  class="main_List__Category-Text-Button">Ver todos</a>
+        </section>
+
+
+
+        <!--  List  -->
+        <ul class="CategoryList">
+        
+
+          <!-- Card 1 -->
+          <a href="./pokemon.html" class="CategoryList_Card">
+            <div class="CategoryList_Card-Top">
+              <p class="CategoryList_Card-Top--Index">#001</p>
+              <button id="addFav" class="CategoryList_Card-Top--Icon">
+                <img 
+                  class="CategoryList_Card-Top--IconImage" 
+                  src="./assets/icon_fav.svg"
+                />
+              </button>
+            </div>
+
+
+          <figure class="CategoryList_Image">
+            <img class="CategoryList_Image__Img" src="./assets/buba.svg"/>
+          </figure>
+
+          <section class="CategoryList_Section">
+            <p class="CategoryList_Section__Text">Bulbassaur</p>
+          </section>
+        </a>
+
+
+
+
+        <!-- Card 2 -->
+          <a href="./pokemon.html" class="CategoryList_Card">
+            <div class="CategoryList_Card-Top">
+              <p class="CategoryList_Card-Top--Index">#001</p>
+              <button id="addFav" class="CategoryList_Card-Top--Icon">
+                <img 
+                  class="CategoryList_Card-Top--IconImage" 
+                  src="./assets/icon_fav.svg"
+                />
+              </button>
+            </div>
+
+
+          <figure class="CategoryList_Image">
+            <img class="CategoryList_Image__Img" src="./assets/buba.svg"/>
+          </figure>
+
+          <section class="CategoryList_Section">
+            <p class="CategoryList_Section__Text">Bulbassaur</p>
+          </section>
+        </a>
+
+
+
+        </ul>
+      </li>
+    
+      <!--  Cat2  -->
+      <li class="main_List__Category">
+        <!--  Tittle  -->
+        <section class="main_List__Category-Text">
+          <img class="main_List__Category-Text-Icon" src="./assets/categorys/grass.svg"/> <!--  Icone da Categoria  -->
+          <h2 class="main_List__Category-Text-Tittle">Planta</h2>
+
+          <a href="./pokedex.html"  class="main_List__Category-Text-Button">Ver todos</a>
+        </section>
+
+
+
+        <!--  List  -->
+        <ul class="CategoryList">
+        
+
+          <!-- Card 1 -->
+          <a href="./pokemon.html" class="CategoryList_Card">
+            <div class="CategoryList_Card-Top">
+              <p class="CategoryList_Card-Top--Index">#001</p>
+              <button id="addFav" class="CategoryList_Card-Top--Icon">
+                <img 
+                  class="CategoryList_Card-Top--IconImage" 
+                  src="./assets/icon_fav.svg"
+                />
+              </button>
+            </div>
+
+
+          <figure class="CategoryList_Image">
+            <img class="CategoryList_Image__Img" src="./assets/buba.svg"/>
+          </figure>
+
+          <section class="CategoryList_Section">
+            <p class="CategoryList_Section__Text">Bulbassaur</p>
+          </section>
+        </a>
+
+
+
+
+        <!-- Card 2 -->
+          <a href="./pokemon.html" class="CategoryList_Card">
+            <div class="CategoryList_Card-Top">
+              <p class="CategoryList_Card-Top--Index">#001</p>
+              <button id="addFav" class="CategoryList_Card-Top--Icon">
+                <img 
+                  class="CategoryList_Card-Top--IconImage" 
+                  src="./assets/icon_fav.svg"
+                />
+              </button>
+            </div>
+
+
+          <figure class="CategoryList_Image">
+            <img class="CategoryList_Image__Img" src="./assets/buba.svg"/>
+          </figure>
+
+          <section class="CategoryList_Section">
+            <p class="CategoryList_Section__Text">Bulbassaur</p>
+          </section>
+        </a>
+
+
+
+        </ul>
+      </li>
+
+
+      <!--  Cat3  -->
+      <li class="main_List__Category">
+        <!--  Tittle  -->
+        <section class="main_List__Category-Text">
+          <img class="main_List__Category-Text-Icon" src="./assets/categorys/eletric.svg"/> <!--  Icone da Categoria  -->
+          <h2 class="main_List__Category-Text-Tittle">Eletrico</h2>
+
+          <a href="./pokedex.html"  class="main_List__Category-Text-Button">Ver todos</a>
+        </section>
+
+
+
+        <!--  List  -->
+        <ul class="CategoryList">
+        
+
+          <!-- Card 1 -->
+          <a href="./pokemon.html" class="CategoryList_Card">
+            <div class="CategoryList_Card-Top">
+              <p class="CategoryList_Card-Top--Index">#001</p>
+              <button id="addFav" class="CategoryList_Card-Top--Icon">
+                <img 
+                  class="CategoryList_Card-Top--IconImage" 
+                  src="./assets/icon_fav.svg"
+                />
+              </button>
+            </div>
+
+
+          <figure class="CategoryList_Image">
+            <img class="CategoryList_Image__Img" src="./assets/buba.svg"/>
+          </figure>
+
+          <section class="CategoryList_Section">
+            <p class="CategoryList_Section__Text">Bulbassaur</p>
+          </section>
+        </a>
+
+
+
+
+        <!-- Card 2 -->
+          <a href="./pokemon.html" class="CategoryList_Card">
+            <div class="CategoryList_Card-Top">
+              <p class="CategoryList_Card-Top--Index">#001</p>
+              <button id="addFav" class="CategoryList_Card-Top--Icon">
+                <img 
+                  class="CategoryList_Card-Top--IconImage" 
+                  src="./assets/icon_fav.svg"
+                />
+              </button>
+            </div>
+
+
+          <figure class="CategoryList_Image">
+            <img class="CategoryList_Image__Img" src="./assets/buba.svg"/>
+          </figure>
+
+          <section class="CategoryList_Section">
+            <p class="CategoryList_Section__Text">Bulbassaur</p>
+          </section>
+        </a>
+
+
+
+        </ul>
+      </li>
+
+
+      <!--  Agua  -->
+      <li class="main_List__Category">
+        <!--  Tittle  -->
+        <section class="main_List__Category-Text">
+          <img class="main_List__Category-Text-Icon" src="./assets/categorys/water.svg"/> <!--  Icone da Categoria  -->
+          <h2 class="main_List__Category-Text-Tittle">Agua</h2>
+
+          <a href="./pokedex.html"  class="main_List__Category-Text-Button">Ver todos</a>
+        </section>
+
+
+
+        <!--  List  -->
+        <ul class="CategoryList">
+        
+
+          <!-- Card 1 -->
+          <a href="./pokemon.html" class="CategoryList_Card">
+            <div class="CategoryList_Card-Top">
+              <p class="CategoryList_Card-Top--Index">#001</p>
+              <button id="addFav" class="CategoryList_Card-Top--Icon">
+                <img 
+                  class="CategoryList_Card-Top--IconImage" 
+                  src="./assets/icon_fav.svg"
+                />
+              </button>
+            </div>
+
+
+          <figure class="CategoryList_Image">
+            <img class="CategoryList_Image__Img" src="./assets/buba.svg"/>
+          </figure>
+
+          <section class="CategoryList_Section">
+            <p class="CategoryList_Section__Text">Bulbassaur</p>
+          </section>
+        </a>
+
+
+
+
+        <!-- Card 2 -->
+          <a href="./pokemon.html" class="CategoryList_Card">
+            <div class="CategoryList_Card-Top">
+              <p class="CategoryList_Card-Top--Index">#001</p>
+              <button id="addFav" class="CategoryList_Card-Top--Icon">
+                <img 
+                  class="CategoryList_Card-Top--IconImage" 
+                  src="./assets/icon_fav.svg"
+                />
+              </button>
+            </div>
+
+
+          <figure class="CategoryList_Image">
+            <img class="CategoryList_Image__Img" src="./assets/buba.svg"/>
+          </figure>
+
+          <section class="CategoryList_Section">
+            <p class="CategoryList_Section__Text">Bulbassaur</p>
+          </section>
+        </a>
+
+
+
+        </ul>
+      </li>
+
+    </ul>
+
+
+
+
+    <section class="main_More">
+      <a href="./pokedex.html" class="main_More__Button">Ver mais Categorias / Pokemons </a>
+    </section>
+  </main>
+
 
 </body>
 </html>

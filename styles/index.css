@@ -1,0 +1,99 @@
+/*  -- Estilizacao da pagina index(homepage) --  */
+.main {
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.main_Search {
+  height: 30%;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.main_Search__Section{
+  height: 40%;
+  text-align: center;
+}
+
+.main_Search__Section-Text {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+
+
+.main_Search__SearchBox {
+  height: 40%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid #a1a1a1 0.5rem;
+  padding: 0px 5px;
+}
+.main_Search__SearchBox-Image {
+  height: 50%;
+}
+.main_Search__SearchBox-Input {
+  background-color: transparent;
+  font-size: 1.25rem;
+  border: none;
+}
+input::placeholder {  color: #2c2c2c;  }
+input:focus-visible {  border: none; outline: none;  }
+
+
+
+
+
+
+.main_Cards {
+  height: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 85%;
+}
+.main_Cards__List {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_Cards__List-Card {
+  height: 60%;
+  width: 20%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid #333;
+  box-shadow: 5px 5px #2c2c2c;
+}
+.main_Cards__List-Card:hover {
+  transform: scale(1.05);
+  cursor: pointer
+}
+
+
+#categorys  {  background-color: #ee8130;  }
+#regions    {  background-color: #7ac74c;  }
+#fav        {  background-color: #ffde00;  }
+#pokedex    {  background-color: #c22e28;  }
+
+.main_Cards__List-Card--Image {
+  height: 50%;
+}
+.main_Cards__List-Card--Text {
+  font-size: 1.325rem;
+  color: #2c2c2c;
+}

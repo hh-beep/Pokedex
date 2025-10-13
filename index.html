@@ -3,33 +3,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="./assets/favicon.png">
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/index.css">
   <title>Pokedex</title>
 </head>
 <body>
 
-
-  <!--  Header  -->
+ <!--  Header  -->
   <header class="header">
     <nav class="header_Navbar">
-      <h1 class="header_Navbar__Title">le Pokedex</h1>
+      <a class="header_Navbar__Title" href="./projeto.html">le Pokedex</a>
 
       <ul class="header_Navbar__List">
+        <a class="header_Navbar__List-Link" href="./index.html">Inicio</a>
         <a class="header_Navbar__List-Link" href="./pokedex.html">Pokedex</a>
         <a class="header_Navbar__List-Link" href="./regioes.html">Regiões</a>
-        <a class="header_Navbar__List-Link" href="categorias.html">Categorias</a>
-        <a class="header_Navbar__List-Link" id="linkUser" href="">
+        <a class="header_Navbar__List-Link" id="linkUser" href="perfil.html">
           <img src="./assets/icon_user.svg"/>
         </a>
       </ul>
 
     </nav>
   </header>
- 
 
   <!--  Main  -->
   <main class="main">
-     
+
 
     <!--  Search  -->
     <section class="main_Search">
@@ -45,28 +44,30 @@
     </section>
 
 
+
     <!--  Cards  -->
     <section class="main_Cards">
       <ul class="main_Cards__List">
-        <li class="main_Cards__List-Card" id="categorys">
+        <a class="main_Cards__List-Card"href="categorias.html" id="categorys">
           <img class="main_Cards__List-Card--Image" src="./assets/icon_categories.svg">
-          <p class="main_Cards__List-Card--Text">Categorias</p>
-        </li>
+          
+        <p class="main_Cards__List-Card--Text">Categorias</p>
+        </a>
 
-        <li class="main_Cards__List-Card" id="regions">
+        <a class="main_Cards__List-Card"href="regioes.html" id="regions">
           <img class="main_Cards__List-Card--Image" src="./assets/icon_regions.svg"/>
           <p class="main_Cards__List-Card--Text">Regioes</p>
-        </li>
+        </a>
 
-        <li class="main_Cards__List-Card" id="fav">
+        <a class="main_Cards__List-Card"href="favoritos.html" id="fav">
           <img class="main_Cards__List-Card--Image" src="./assets/icon_fav.svg"/>
           <p class="main_Cards__List-Card--Text">Favoritos</p>
-        </li>
+        </a>
 
-        <li class="main_Cards__List-Card" id="pokedex">
-          <img class="main_Cards__List-Card--Image" src="./assets/favicon.png"/>
+        <a class="main_Cards__List-Card"href="pokedex.html" id="pokedex">
+          <img class="main_Cards__List-Card--Image" src="./assets/icon_pokedex.svg"/>
           <p class="main_Cards__List-Card--Text">Pokedex</p>
-        </li>
+        </a>
       </ul>
     </section>
   </main>

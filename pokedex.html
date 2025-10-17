@@ -11,19 +11,24 @@
 
 
 
-  <!--  Header  -->
+  <!--  Header de Navegação entre Paginas  -->
   <header class="header">
     <nav class="header_Navbar">
+
+
+      <!--  Titulo da Navegação-->
       <a class="header_Navbar__Title" href="./projeto.html">le Pokedex</a>
 
+      <!--  Lista de Paginas  -->
       <ul class="header_Navbar__List">
-        <a class="header_Navbar__List-Link" href="./index.html">Inicio</a>
-        <a class="header_Navbar__List-Link" href="./pokedex.html">Pokedex</a>
-        <a class="header_Navbar__List-Link" href="./regioes.html">Regiões</a>
-        <a class="header_Navbar__List-Link" id="linkUser" href="perfil.html">
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkHome" href="./index.html">Inicio</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkPokedex" href="./pokedex.html">Pokedex</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkRegions" href="./regioes.html">Regiões</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkUser" href="perfil.html">
           <img src="./assets/icon_user.svg"/>
         </a>
       </ul>
+
 
     </nav>
   </header>
@@ -31,24 +36,33 @@
 
 
 
-  <!-- Conteúdo Pincipal-->
+
+
+  <!--  Conteúdo Pincipal  -->
   <main class="main">
 
       
-    <!--  Search  -->
+    <!--  Area de Pesquisa (Inputs, InputBoxs e Button )  -->
     <section class="main_Search">
 
 
-      <!--  Input de Pesquisa  -->
+
+      <!--  Input de Pesquisa [id: Pokedex_InputBar]  -->
       <input 
-        id="Pokedex_SearchBar"
+        id="Pokedex_InputBar"
         class="main_Search__SearchBar" 
         placeholder="Digite o nome do Pokemon"
       >
 
-      <!--  Ordenador de Categorias  -->
-      <label class="main_Search__Category-Label" for="categorySelect">Categorias
-      <select class="main_Search__Category-Select" id="categorySelect" aria-label="Categorias">
+
+
+      <!--  Ordenador de Categorias [id:Pokedex_InputCategorySelect]  -->
+      <label class="main_Search__Category-Label" for="Pokedex_InputCategorySelect">Categorias
+      <select 
+        id="Pokedex_InputCategorySelect" 
+        class="main_Search__Category-Select" 
+        aria-label="Categorias"
+      >
         <option class="main_Search__Category-Select--opt" value="all">Todas as categorias</option>
         <option class="main_Search__Category-Select--opt" value="normal">Normal</option>
         <option class="main_Search__Category-Select--opt" value="fire">Fogo</option>
@@ -73,18 +87,29 @@
 
 
 
-      <!--  Ordenador de Ordens kkk (a definir)  -->
-      <label for="sortSelect">Ordenar
-        <select id="sortSelect" aria-label="Ordenar">
-          <option value="num">Ordenar por nº</option>
-          <option value="name">Nome</option>
+      <!--  Ordenador Pokemons por Numero (id) ou Nome (A-Z) [id: Pokedex_InputOrderSelect]  -->
+      <label class="main_Search__Order" for="sortSelect">Ordenar por
+
+        <select 
+          id="Pokedex_InputOrderSelect" 
+          class="main_Search__Order-Select"
+          aria-label="Ordenar"
+        >
+          <option class="main_Search__Order-Select--Opt" value="num">Ordenar por nº</option>
+          <option class="main_Search__Order-Select--Opt" value="name">Nome</option>
         </select>
       </label>
 
 
-      <button class="main_Search__Button">
+
+      <!--  Botao de Submit do InputBar [id: Pokedex_ButtonSubmit]  -->
+      <button 
+        id="Pokedex_ButtonSubmit"
+        class="main_Search__Button"
+      >
         <img class="main_Search__Button-icon" href="./assets/icon_search.svg"/>
       </button>
+
 
 
     </section>
@@ -92,16 +117,31 @@
 
 
 
-      <!--  Lista de Cards  -->
-      <ul id="Pokedex_CardsList" class="main_List">
+      <!--  Lista de Cards [id: Pokedex_CardsList]  -->
+      <ul 
+        id="Pokedex_CardsList" 
+        class="main_List"
+      >
         
 
 
-        <!-- Card 1 -->
-        <a href="./pokemon.html" class="main_List__Card">
+        <!--  Card 1 [class: Pokedex_Card]  -->
+        <a 
+          href="./pokemon.html" 
+          class="main_List__Card Pokedex_Card"
+        >
+
+
+
+        <!--  Parte Superior do Card (Id e Btn pra favoritar) [button id: Pokedex_CardButton] [Pokemon id: Pokedex_CardId]  -->
           <div class="main_List__Card-Top">
-            <p class="main_List__Card-Top--Index">#001</p>
-            <button id="addFav" class="main_List__Card-Top--Icon">
+            <p class="main_List__Card-Top--Index">[  Pokemon ID  ]</p>
+
+
+            <button  
+              id="Pokedex_CardButton"
+              class="main_List__Card-Top--Icon"
+            >
               <img 
                 class="main_List__Card-Top--IconImage" 
                 src="./assets/icon_star.svg"
@@ -110,22 +150,46 @@
           </div>
 
 
+
+          <!--  Area da Imagem do Card  -->
           <figure class="main_List__Image">
-            <img class="main_List__Image-Img" src="./assets/buba.svg"/>
+            <img class="main_List__Image-Img" src="[  URL da Imagem  ]"/>
           </figure>
 
-          <section class="main_List__Section">
-            <p>Bulbassaur</p>
+
+
+          <!--  Nome do Pokemon [Nome id: Pokedex_CardName]  -->
+          <section   
+            class="main_List__Section"
+          >
+            <p class="main_List__Section-Text">[  Nome do Pokemon  ]</p>
           </section>
+
+
+
         </a>
 
 
 
-        <!-- Card 2 -->
-        <a href="./pokemon.html" class="main_List__Card">
+
+
+        <!--  Card 2 [class: Pokedex_Card]  -->
+        <a 
+          href="./pokemon.html" 
+          class="main_List__Card Pokedex_Card"
+        >
+
+
+
+        <!--  Parte Superior do Card (Id e Btn pra favoritar) [button id: Pokedex_CardButton] [Pokemon id: Pokedex_CardId]  -->
           <div class="main_List__Card-Top">
-            <p class="main_List__Card-Top--Index">#001</p>
-            <button id="addFav" class="main_List__Card-Top--Icon">
+            <p class="main_List__Card-Top--Index">[  Pokemon ID  ]</p>
+
+
+            <button  
+              id="Pokedex_CardButton"
+              class="main_List__Card-Top--Icon"
+            >
               <img 
                 class="main_List__Card-Top--IconImage" 
                 src="./assets/icon_star.svg"
@@ -134,66 +198,25 @@
           </div>
 
 
+
+          <!--  Area da Imagem do Card  -->
           <figure class="main_List__Image">
-            <img class="main_List__Image-Img" src="./assets/buba.svg"/>
+            <img class="main_List__Image-Img" src="[  URL da Imagem  ]"/>
           </figure>
 
-          <section class="main_List__Section">
-            <p>Bulbassaur</p>
+
+
+          <!--  Nome do Pokemon [Nome id: Pokedex_CardName]  -->
+          <section   
+            class="main_List__Section"
+          >
+            <p class="main_List__Section-Text">[  Nome do Pokemon  ]</p>
           </section>
+
+
+
         </a>
 
-
-
-
-
-
-        <!-- Card 3 -->
-        <a href="./pokemon.html" class="main_List__Card">
-          <div class="main_List__Card-Top">
-            <p class="main_List__Card-Top--Index">#001</p>
-            <button id="addFav" class="main_List__Card-Top--Icon">
-              <img 
-                class="main_List__Card-Top--IconImage" 
-                src="./assets/icon_star.svg"
-              />
-            </button>
-          </div>
-
-
-          <figure class="main_List__Image">
-            <img class="main_List__Image-Img" src="./assets/buba.svg"/>
-          </figure>
-
-          <section class="main_List__Section">
-            <p>Bulbassaur</p>
-          </section>
-        </a>
-
-
-
-
-        <!-- Card 4 -->
-        <a href="./pokemon.html" class="main_List__Card">
-          <div class="main_List__Card-Top">
-            <p class="main_List__Card-Top--Index">#001</p>
-            <button id="addFav" class="main_List__Card-Top--Icon">
-              <img 
-                class="main_List__Card-Top--IconImage" 
-                src="./assets/icon_star.svg"
-              />
-            </button>
-          </div>
-
-
-          <figure class="main_List__Image">
-            <img class="main_List__Image-Img" src="./assets/buba.svg"/>
-          </figure>
-
-          <section class="main_List__Section">
-            <p>Bulbassaur</p>
-          </section>
-        </a>
 
 
       </section>

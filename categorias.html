@@ -10,19 +10,24 @@
 <body>
 
 
-  <!--  Header  -->
+  <!--  Header de Navegação entre Paginas  -->
   <header class="header">
     <nav class="header_Navbar">
+
+
+      <!--  Titulo da Navegação-->
       <a class="header_Navbar__Title" href="./projeto.html">le Pokedex</a>
 
+      <!--  Lista de Paginas  -->
       <ul class="header_Navbar__List">
-        <a class="header_Navbar__List-Link" href="./index.html">Inicio</a>
-        <a class="header_Navbar__List-Link" href="./pokedex.html">Pokedex</a>
-        <a class="header_Navbar__List-Link" href="./regioes.html">Regiões</a>
-        <a class="header_Navbar__List-Link" id="linkUser" href="perfil.html">
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkHome" href="./index.html">Inicio</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkPokedex" href="./pokedex.html">Pokedex</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkRegions" href="./regioes.html">Regiões</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkUser" href="perfil.html">
           <img src="./assets/icon_user.svg"/>
         </a>
       </ul>
+
 
     </nav>
   </header>
@@ -34,143 +39,153 @@
   <!--  Conteudo Principal  -->
   <main class="main">
     
+    <!--  Titulo de Exibicao Principal da Pagina  -->
     <section class="main_Section">
-      <h1>Descubra as Principais Categorias</h1>
+      <h1 class="main_Section__Tittle">Descubra as Principais Categorias</h1>
     </section>
 
 
+
+    <!--  Lista das Principais Categorias  -->
     <ul class="main_List"> 
 
-      <!--  Cat1  -->
+
+
+      <!--  Categoria 1 (fogo)  -->
       <li class="main_List__Category">
-        <!--  Tittle  -->
+
+
+        <!--  Area de Nome da Categoria  -->
         <section class="main_List__Category-Text">
           <img class="main_List__Category-Text-Icon" src="./assets/categorys/fire.svg"/> <!--  Icone da Categoria  -->
           <h2 class="main_List__Category-Text-Tittle">Fogo</h2>
 
+          <!--  Esse Link leva à pokedex.html-->
           <a href="./pokedex.html"  class="main_List__Category-Text-Button">Ver todos</a>
         </section>
 
 
 
-        <!--  List  -->
+        <!--  Lista de Cards de Pokemons dessa categoria  -->
         <ul class="CategoryList">
         
 
-          <!-- Card 1 -->
-          <a href="./pokemon.html" class="CategoryList_Card">
-            <div class="CategoryList_Card-Top">
-              <p class="CategoryList_Card-Top--Index">#001</p>
-              <button id="addFav" class="CategoryList_Card-Top--Icon">
+          <!--  Card 1 [class: Pokedex_Card]  -->
+          <a 
+            href="./pokemon.html" 
+            class="main_List__Card Pokedex_Card"
+          >
+
+
+
+          <!--  Parte Superior do Card (Id e Btn pra favoritar) [button id: Pokedex_CardButton] [Pokemon id: Pokedex_CardId]  -->
+            <div class="main_List__Card-Top">
+              <p class="main_List__Card-Top--Index">[  Pokemon ID  ]</p>
+
+
+              <button  
+                id="Pokedex_CardButton"
+                class="main_List__Card-Top--Icon"
+              >
                 <img 
-                  class="CategoryList_Card-Top--IconImage" 
-                  src="./assets/icon_fav.svg"
+                  class="main_List__Card-Top--IconImage" 
+                  src="./assets/icon_star.svg"
                 />
               </button>
             </div>
 
 
-          <figure class="CategoryList_Image">
-            <img class="CategoryList_Image__Img" src="./assets/buba.svg"/>
-          </figure>
 
-          <section class="CategoryList_Section">
-            <p class="CategoryList_Section__Text">Bulbassaur</p>
-          </section>
-        </a>
+            <!--  Area da Imagem do Card  -->
+            <figure class="main_List__Image">
+              <img class="main_List__Image-Img" src="[  URL da Imagem  ]"/>
+            </figure>
 
 
 
-
-        <!-- Card 2 -->
-          <a href="./pokemon.html" class="CategoryList_Card">
-            <div class="CategoryList_Card-Top">
-              <p class="CategoryList_Card-Top--Index">#001</p>
-              <button id="addFav" class="CategoryList_Card-Top--Icon">
-                <img 
-                  class="CategoryList_Card-Top--IconImage" 
-                  src="./assets/icon_fav.svg"
-                />
-              </button>
-            </div>
+            <!--  Nome do Pokemon [Nome id: Pokedex_CardName]  -->
+            <section   
+              class="main_List__Section"
+            >
+              <p class="main_List__Section-Text">[  Nome do Pokemon  ]</p>
+            </section>
 
 
-          <figure class="CategoryList_Image">
-            <img class="CategoryList_Image__Img" src="./assets/buba.svg"/>
-          </figure>
 
-          <section class="CategoryList_Section">
-            <p class="CategoryList_Section__Text">Bulbassaur</p>
-          </section>
-        </a>
+          </a>
 
 
 
         </ul>
       </li>
     
-      <!--  Cat2  -->
+
+
+
+
+      <!--  Categoria 2 (Planta)  -->
       <li class="main_List__Category">
-        <!--  Tittle  -->
+
+
+
+        <!--  Area de Nome da Categoria  -->
         <section class="main_List__Category-Text">
           <img class="main_List__Category-Text-Icon" src="./assets/categorys/grass.svg"/> <!--  Icone da Categoria  -->
           <h2 class="main_List__Category-Text-Tittle">Planta</h2>
 
+          <!--  Esse Link leva à pokedex.html-->
           <a href="./pokedex.html"  class="main_List__Category-Text-Button">Ver todos</a>
         </section>
 
 
 
-        <!--  List  -->
+        <!--  Lista de Cards de Pokemons dessa categoria  -->
         <ul class="CategoryList">
         
 
-          <!-- Card 1 -->
-          <a href="./pokemon.html" class="CategoryList_Card">
-            <div class="CategoryList_Card-Top">
-              <p class="CategoryList_Card-Top--Index">#001</p>
-              <button id="addFav" class="CategoryList_Card-Top--Icon">
+          <!--  Card 1 [class: Pokedex_Card]  -->
+          <a 
+            href="./pokemon.html" 
+            class="main_List__Card Pokedex_Card"
+          >
+
+
+
+          <!--  Parte Superior do Card (Id e Btn pra favoritar) [button id: Pokedex_CardButton] [Pokemon id: Pokedex_CardId]  -->
+            <div class="main_List__Card-Top">
+              <p class="main_List__Card-Top--Index">[  Pokemon ID  ]</p>
+
+
+              <button  
+                id="Pokedex_CardButton"
+                class="main_List__Card-Top--Icon"
+              >
                 <img 
-                  class="CategoryList_Card-Top--IconImage" 
-                  src="./assets/icon_fav.svg"
+                  class="main_List__Card-Top--IconImage" 
+                  src="./assets/icon_star.svg"
                 />
               </button>
             </div>
 
 
-          <figure class="CategoryList_Image">
-            <img class="CategoryList_Image__Img" src="./assets/buba.svg"/>
-          </figure>
 
-          <section class="CategoryList_Section">
-            <p class="CategoryList_Section__Text">Bulbassaur</p>
-          </section>
-        </a>
+            <!--  Area da Imagem do Card  -->
+            <figure class="main_List__Image">
+              <img class="main_List__Image-Img" src="[  URL da Imagem  ]"/>
+            </figure>
 
 
 
-
-        <!-- Card 2 -->
-          <a href="./pokemon.html" class="CategoryList_Card">
-            <div class="CategoryList_Card-Top">
-              <p class="CategoryList_Card-Top--Index">#001</p>
-              <button id="addFav" class="CategoryList_Card-Top--Icon">
-                <img 
-                  class="CategoryList_Card-Top--IconImage" 
-                  src="./assets/icon_fav.svg"
-                />
-              </button>
-            </div>
+            <!--  Nome do Pokemon [Nome id: Pokedex_CardName]  -->
+            <section   
+              class="main_List__Section"
+            >
+              <p class="main_List__Section-Text">[  Nome do Pokemon  ]</p>
+            </section>
 
 
-          <figure class="CategoryList_Image">
-            <img class="CategoryList_Image__Img" src="./assets/buba.svg"/>
-          </figure>
 
-          <section class="CategoryList_Section">
-            <p class="CategoryList_Section__Text">Bulbassaur</p>
-          </section>
-        </a>
+          </a>
 
 
 
@@ -178,141 +193,140 @@
       </li>
 
 
-      <!--  Cat3  -->
+
+
+
+      <!--  Categoria 3 ((Eletricos)  -->
       <li class="main_List__Category">
-        <!--  Tittle  -->
+
+
+        <!--  Area de Nome da Categoria  -->
         <section class="main_List__Category-Text">
           <img class="main_List__Category-Text-Icon" src="./assets/categorys/eletric.svg"/> <!--  Icone da Categoria  -->
           <h2 class="main_List__Category-Text-Tittle">Eletrico</h2>
 
+          <!--  Esse Link leva à pokedex.html-->
           <a href="./pokedex.html"  class="main_List__Category-Text-Button">Ver todos</a>
         </section>
 
 
 
-        <!--  List  -->
+        <!--  Lista de Cards de Pokemons dessa categoria  -->
         <ul class="CategoryList">
         
 
-          <!-- Card 1 -->
-          <a href="./pokemon.html" class="CategoryList_Card">
-            <div class="CategoryList_Card-Top">
-              <p class="CategoryList_Card-Top--Index">#001</p>
-              <button id="addFav" class="CategoryList_Card-Top--Icon">
+          <!--  Card 1 [class: Pokedex_Card]  -->
+          <a 
+            href="./pokemon.html" 
+            class="main_List__Card Pokedex_Card"
+          >
+
+
+
+          <!--  Parte Superior do Card (Id e Btn pra favoritar) [button id: Pokedex_CardButton] [Pokemon id: Pokedex_CardId]  -->
+            <div class="main_List__Card-Top">
+              <p class="main_List__Card-Top--Index">[  Pokemon ID  ]</p>
+
+
+              <button  
+                id="Pokedex_CardButton"
+                class="main_List__Card-Top--Icon"
+              >
                 <img 
-                  class="CategoryList_Card-Top--IconImage" 
-                  src="./assets/icon_fav.svg"
+                  class="main_List__Card-Top--IconImage" 
+                  src="./assets/icon_star.svg"
                 />
               </button>
             </div>
 
 
-          <figure class="CategoryList_Image">
-            <img class="CategoryList_Image__Img" src="./assets/buba.svg"/>
-          </figure>
 
-          <section class="CategoryList_Section">
-            <p class="CategoryList_Section__Text">Bulbassaur</p>
-          </section>
-        </a>
+            <!--  Area da Imagem do Card  -->
+            <figure class="main_List__Image">
+              <img class="main_List__Image-Img" src="[  URL da Imagem  ]"/>
+            </figure>
 
 
 
-
-        <!-- Card 2 -->
-          <a href="./pokemon.html" class="CategoryList_Card">
-            <div class="CategoryList_Card-Top">
-              <p class="CategoryList_Card-Top--Index">#001</p>
-              <button id="addFav" class="CategoryList_Card-Top--Icon">
-                <img 
-                  class="CategoryList_Card-Top--IconImage" 
-                  src="./assets/icon_fav.svg"
-                />
-              </button>
-            </div>
-
-
-          <figure class="CategoryList_Image">
-            <img class="CategoryList_Image__Img" src="./assets/buba.svg"/>
-          </figure>
-
-          <section class="CategoryList_Section">
-            <p class="CategoryList_Section__Text">Bulbassaur</p>
-          </section>
-        </a>
+            <!--  Nome do Pokemon [Nome id: Pokedex_CardName]  -->
+            <section   
+              class="main_List__Section"
+            >
+              <p class="main_List__Section-Text">[  Nome do Pokemon  ]</p>
+            </section>
 
 
 
-        </ul>
+          </a>
       </li>
 
 
-      <!--  Agua  -->
+
+
+      <!--  Categoria 4 (Agua)  -->
       <li class="main_List__Category">
-        <!--  Tittle  -->
+
+
+        <!--  Area de Nome da Categoria  -->
         <section class="main_List__Category-Text">
           <img class="main_List__Category-Text-Icon" src="./assets/categorys/water.svg"/> <!--  Icone da Categoria  -->
           <h2 class="main_List__Category-Text-Tittle">Agua</h2>
 
+          <!--  Esse Link leva à pokedex.html-->
           <a href="./pokedex.html"  class="main_List__Category-Text-Button">Ver todos</a>
         </section>
 
 
 
-        <!--  List  -->
+        <!--  Lista de Cards de Pokemons dessa categoria  -->
         <ul class="CategoryList">
         
 
-          <!-- Card 1 -->
-          <a href="./pokemon.html" class="CategoryList_Card">
-            <div class="CategoryList_Card-Top">
-              <p class="CategoryList_Card-Top--Index">#001</p>
-              <button id="addFav" class="CategoryList_Card-Top--Icon">
+          <!--  Card 1 [class: Pokedex_Card]  -->
+          <a 
+            href="./pokemon.html" 
+            class="main_List__Card Pokedex_Card"
+          >
+
+
+
+          <!--  Parte Superior do Card (Id e Btn pra favoritar) [button id: Pokedex_CardButton] [Pokemon id: Pokedex_CardId]  -->
+            <div class="main_List__Card-Top">
+              <p class="main_List__Card-Top--Index">[  Pokemon ID  ]</p>
+
+
+              <button  
+                id="Pokedex_CardButton"
+                class="main_List__Card-Top--Icon"
+              >
                 <img 
-                  class="CategoryList_Card-Top--IconImage" 
-                  src="./assets/icon_fav.svg"
+                  class="main_List__Card-Top--IconImage" 
+                  src="./assets/icon_star.svg"
                 />
               </button>
             </div>
 
 
-          <figure class="CategoryList_Image">
-            <img class="CategoryList_Image__Img" src="./assets/buba.svg"/>
-          </figure>
 
-          <section class="CategoryList_Section">
-            <p class="CategoryList_Section__Text">Bulbassaur</p>
-          </section>
-        </a>
+            <!--  Area da Imagem do Card  -->
+            <figure class="main_List__Image">
+              <img class="main_List__Image-Img" src="[  URL da Imagem  ]"/>
+            </figure>
 
 
 
-
-        <!-- Card 2 -->
-          <a href="./pokemon.html" class="CategoryList_Card">
-            <div class="CategoryList_Card-Top">
-              <p class="CategoryList_Card-Top--Index">#001</p>
-              <button id="addFav" class="CategoryList_Card-Top--Icon">
-                <img 
-                  class="CategoryList_Card-Top--IconImage" 
-                  src="./assets/icon_fav.svg"
-                />
-              </button>
-            </div>
-
-
-          <figure class="CategoryList_Image">
-            <img class="CategoryList_Image__Img" src="./assets/buba.svg"/>
-          </figure>
-
-          <section class="CategoryList_Section">
-            <p class="CategoryList_Section__Text">Bulbassaur</p>
-          </section>
-        </a>
+            <!--  Nome do Pokemon [Nome id: Pokedex_CardName]  -->
+            <section   
+              class="main_List__Section"
+            >
+              <p class="main_List__Section-Text">[  Nome do Pokemon  ]</p>
+            </section>
 
 
 
-        </ul>
+          </a>
+
+
       </li>
 
     </ul>
@@ -320,6 +334,7 @@
 
 
 
+    <!--  Area para levar à Pokedex.html (para mostrar todos os pokemons)-->
     <section class="main_More">
       <a href="./pokedex.html" class="main_More__Button">Ver mais Categorias / Pokemons </a>
     </section>

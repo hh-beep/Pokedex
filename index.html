@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,69 +10,116 @@
 </head>
 <body>
 
- <!--  Header  -->
+<!--  
+  Estrutura do Codigo:  
+
+    header
+      ->  header_Navbar
+        ->  header_Navbar__Tittle
+        ->  header_Navbar_List
+            ->  header_Navbar__List-Link
+            ....
+
+-->
+
+
+  <!--  Header de Navegação entre Paginas  -->
   <header class="header">
     <nav class="header_Navbar">
+
+
+      <!--  Titulo da Navegação-->
       <a class="header_Navbar__Title" href="./projeto.html">le Pokedex</a>
 
+      <!--  Lista de Paginas  -->
       <ul class="header_Navbar__List">
-        <a class="header_Navbar__List-Link" href="./index.html">Inicio</a>
-        <a class="header_Navbar__List-Link" href="./pokedex.html">Pokedex</a>
-        <a class="header_Navbar__List-Link" href="./regioes.html">Regiões</a>
-        <a class="header_Navbar__List-Link" id="linkUser" href="perfil.html">
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkHome" href="./index.html">Inicio</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkPokedex" href="./pokedex.html">Pokedex</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkRegions" href="./regioes.html">Regiões</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkUser" href="perfil.html">
           <img src="./assets/icon_user.svg"/>
         </a>
       </ul>
 
+
     </nav>
   </header>
 
-  <!--  Main  -->
+
+
+  <!--  Conteudo Principal  -->
   <main class="main">
 
 
-    <!--  Search  -->
+    <!--  Area da Pesquisa (Search)  -->
     <section class="main_Search">
+
+
+
+      <!--  Texto acima do Input  -->
       <section class="main_Search__Section">
         <p class="main_Search__Section-Text">~Descubra mais sobre seus pokémons favoritos~</p>
         <p class="main_Search__Section-Text">O que buscas por hoje?</p>
       </section>
 
+
+      <!--  Area com Input e Button  -->
       <section class="main_Search__SearchBox">
-        <input class="main_Search__SearchBox-Input" placeholder="Pesquisar Pokemon" type="text"> 
+        <input 
+          id="Home_SearchInput"
+          class="main_Search__SearchBox-Input" 
+          placeholder="Pesquisar Pokemon" 
+          type="text"
+        > 
         <img class="main_Search__SearchBox-Image" src="./assets/icon_search.svg"/>
       </section>
+
+
+
     </section>
 
 
 
-    <!--  Cards  -->
+
+
+    <!--  Area de Cards  -->
     <section class="main_Cards">
       <ul class="main_Cards__List">
-        <a class="main_Cards__List-Card"href="categorias.html" id="categorys">
+
+
+        <!--  Card 1 (Categorias)  -->
+        <a class="main_Cards__List-Card categorias" href="categorias.html" id="categorys">
           <img class="main_Cards__List-Card--Image" src="./assets/icon_categories.svg">
-          
-        <p class="main_Cards__List-Card--Text">Categorias</p>
+          <p class="main_Cards__List-Card--Text">Categorias</p>
         </a>
 
-        <a class="main_Cards__List-Card"href="regioes.html" id="regions">
+
+        <!--  Card 2  (Regioes) -->
+        <a class="main_Cards__List-Card categorias" href="regioes.html" id="regions">
           <img class="main_Cards__List-Card--Image" src="./assets/icon_regions.svg"/>
           <p class="main_Cards__List-Card--Text">Regioes</p>
         </a>
 
-        <a class="main_Cards__List-Card"href="favoritos.html" id="fav">
+
+        <!--  Card 3 (Favoritos)  -->
+        <a class="main_Cards__List-Card categorias" href="favoritos.html" id="favorites">
           <img class="main_Cards__List-Card--Image" src="./assets/icon_fav.svg"/>
           <p class="main_Cards__List-Card--Text">Favoritos</p>
         </a>
 
-        <a class="main_Cards__List-Card"href="pokedex.html" id="pokedex">
+
+        <!--  Card 4 (Pokedex)  -->
+        <a class="main_Cards__List-Card categorias" href="pokedex.html" id="pokedex">
           <img class="main_Cards__List-Card--Image" src="./assets/icon_pokedex.svg"/>
           <p class="main_Cards__List-Card--Text">Pokedex</p>
         </a>
+
+
       </ul>
     </section>
+  
+  
+  
   </main>
-
-  <footer>
-  </footer>
 </body>
+</htm|>

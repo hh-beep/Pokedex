@@ -1,0 +1,92 @@
+.main {
+  padding: 20px;
+}
+
+.main_Section h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.main_List {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main_List__Category {
+  margin-bottom: 40px;
+}
+
+.main_List__Category-Text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.main_List__Category-Text-Icon {
+  width: 30px;
+  height: 30px;
+}
+
+.main_List__Category-Text-Tittle {
+  font-size: 24px;
+}
+
+.main_List__Category-Text-Button {
+  display: none;
+}
+
+.CategoryList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.CategoryList_Card {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.CategoryList_Card-Top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.CategoryList_Card-Top--Index {
+  font-size: 14px;
+}
+
+.CategoryList_Card-Top--Icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.CategoryList_Image__Img {
+  width: 100px;
+  height: 100px;
+}
+
+.CategoryList_Section__Text {
+  font-size: 16px;
+  color: #000;
+}
+
+.main_More {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.main_More__Button {
+  text-decoration: none;
+  background-color: #ddd;
+  padding: 10px 20px;
+  border-radius: 5px;
+}

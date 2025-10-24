@@ -1,6 +1,6 @@
 // Pego os elementos do HTML que vou usar
 const cardsList = document.getElementById('Pokedex_CardsList');
-const botaoMais = document.getElementById('botaoMais');
+const botaoMais = document.getElementById('Pokedex_ButtonMore');
 const inputBar = document.getElementById('Pokedex_InputBar');
 const searchButton = document.getElementById('Pokedex_ButtonSubmit');
 
@@ -17,7 +17,8 @@ function criarCard(pokemon) {
   const nome = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
   
   // Monto o link da imagem do Pokémon (sprite da versão padrão)
-  const sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+  const sprite = `https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/${pokemon.name}.png`;
+  //const sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 
   // Crio o elemento HTML do card
   const li = document.createElement('li');

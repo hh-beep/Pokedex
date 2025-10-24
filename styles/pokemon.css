@@ -1,0 +1,115 @@
+.Green {  background-color: #7AC74C;  }
+.Purple {  background-color: #705898;  }
+.Red {  background-color: #C22E28;  }
+.Orange {  background-color: #EE8130;  }
+.Blue {  background-color: #3A9BDC;  }
+.Yellow {  background-color: #FFDE00;  }
+.Pink {  background-color: #F9A9D9;  }
+.WhiteSmoke {  background-color: #B8B8D0;  }
+.Black {  background-color: #2c2c2c;  }
+.White {  background-color: #fff;  }
+
+
+
+
+
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    min-height: 70vh;
+    flex-direction: row;
+}
+.main_Figure {
+    width: 35%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.main_Figure__Image {
+    width: 70%;
+    object-fit: contain;
+}
+.main_Infos {
+    width: 65%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.main_Infos__Principais {
+    height: 40%;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.main_Infos__Principais-Id, .main_Infos__Principais-Name {
+    width: 60%;
+    color: #fff;
+    text-align: center;
+}
+.main_Infos__Principais-Id   {  font-size: 2.75rem;  }
+.main_Infos__Principais-Name {  font-size: 4rem;  }
+.main_Infos__Principais-Lista{
+    text-align: center;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #f2f2f2;
+    font-size: 2rem;
+}
+.ListaCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+    border: 3px solid #2c2c2c;
+    box-shadow: 5px 5px #2c2c2c;
+    height: 50%;
+}
+.ListaCard:hover {
+    transform: scale(1.075);
+    cursor: pointer;
+}
+
+
+
+
+.main_Infos__Status {
+    height: 50%;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.main_Infos__Status-Tittle {
+    font-size: 2.75rem;
+    color: #fff;
+}
+.statusList {
+    height: 60%;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.statusList_Item {
+    color: #f2f2f2;
+    font-size: 1.5rem;
+    width: 80%;
+    height: 15%;
+    border: 3px solid #2c2c2c;
+    box-shadow: 5px 5px #2c2c2c;
+    padding: 0 1rem;
+}

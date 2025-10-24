@@ -1,7 +1,7 @@
 /*  -- Estilizacao da pagina index(homepage) --  */
 .main {
   height: 75vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,6 +78,7 @@ input:focus-visible {  border: none; outline: none;  }
   flex-direction: column;
   border: 2px solid #333;
   box-shadow: 5px 5px #2c2c2c;
+  margin: 0 1rem;
 }
 .main_Cards__List-Card:hover {
   transform: scale(1.05);
@@ -87,7 +88,7 @@ input:focus-visible {  border: none; outline: none;  }
 
 #categorys  {  background-color: #ee8130;  }
 #regions    {  background-color: #7ac74c;  }
-#fav        {  background-color: #ffde00;  }
+#favorites  {  background-color: #ffde00;  }
 #pokedex    {  background-color: #c22e28;  }
 
 .main_Cards__List-Card--Image {

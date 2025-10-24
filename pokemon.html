@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-|<html lang="pt-BR">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="./assets/favicon.png">
   <link rel="stylesheet" href="./styles/base.css">
-  <link rel="stylesheet" href="./styles/perfil.css">
+  <link rel="stylesheet" href="./styles/pokemon.css">
   <title>Pokedex</title>
 </head>
 
@@ -31,8 +31,11 @@
 
     </nav>
   </header>
+
+
+
   <!--  Conteudo Principal  -->
-  <main>
+  <main class="main">
     <!--  Imagem do Pokemon [ image url id: Pokemon_InfosImageURL]  -->
     <figure class="main_Figure">
       <img id="Pokemon_InfosImageURL" class="main_Figure__Image" alt="Imagem do Pokémon">
@@ -59,7 +62,7 @@
       <section class="main_Infos__Status">
 
         <!--  Titulo  -->
-        <h2>Status:</h2>
+        <h2 class="main_Infos__Status-Tittle">Status:</h2>
 
         <!--  Lista dos Status  -->
         <!--
@@ -68,16 +71,18 @@
           [ Defesa id:  Pokemon_InfosDesense ]
           [ Speed id:   Pokemon_InfosSpeed ]
         -->
-        <ul class="main_Infos__Status-List">
-          <li id="Pokemon_InfosHP" class="main_infos__Status-List--Infos">HP: [ HP ]</li>
-          <li id="Pokemon_InfosAttack" class="main_infos__Status-List--Infos">Attack: [ ATTACK ]</li>
-          <li id="Pokemon_InfosDefense" class="main_infos__Status-List--Infos">Defense: [ DEFENSE ]</li>
-          <li id="Pokemon_InfosSpeed" class="main_infos__Status-List--Infos">Speed: [ SPEED ]</li>
+        <ul class="statusList">
+          <li id="Pokemon_InfosHP" class="statusList_Item Green">HP: [ HP ]</li>
+          <li id="Pokemon_InfosAttack" class="statusList_Item Red">Attack: [ ATTACK ]</li>
+          <li id="Pokemon_InfosDefense" class="statusList_Item WhiteSmoke">Defense: [ DEFENSE ]</li>
+          <li id="Pokemon_InfosSpeed" class="statusList_Item Yellow">Speed: [ SPEED ]</li>
         </ul>
       </section>
     </section>
   </main>
-  <script src="pokemon.js"></script>
+
+
+  <script src="./scripts/pokemon.js"></script>
 </body>
 
 </html>

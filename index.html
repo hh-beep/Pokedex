@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,10 @@
   <link rel="stylesheet" href="./styles/index.css">
   <title>Pokedex</title>
 </head>
+
 <body>
 
-<!--  
+  <!--  
   Estrutura do Codigo:  
 
     header
@@ -37,7 +39,7 @@
         <a class="header_Navbar__List-Link Navbar_Link" id="linkPokedex" href="./pokedex.html">Pokedex</a>
         <a class="header_Navbar__List-Link Navbar_Link" id="linkRegions" href="./regioes.html">Regiões</a>
         <a class="header_Navbar__List-Link Navbar_Link" id="linkUser" href="perfil.html">
-          <img src="./assets/icon_user.svg"/>
+          <img src="./assets/icon_user.svg" />
         </a>
       </ul>
 
@@ -52,7 +54,7 @@
 
 
     <!--  Area da Pesquisa (Search)  -->
-    <section class="main_Search">
+    <form class="main_Search">
 
 
 
@@ -63,29 +65,16 @@
       </section>
 
 
-      <!--  Area com Input e Button  -->
+      <!--  Area com Input e Button -->
       <section class="main_Search__SearchBox">
-        <input 
-          id="Home_SearchInput"
-          class="main_Search__SearchBox-Input" 
-          placeholder="Pesquisar Pokemon" 
-          type="text"
-        > 
-        <img class="main_Search__SearchBox-Image" src="./assets/icon_search.svg"/>
+        <input id="Home_SearchInput" class="main_Search__SearchBox-Input" placeholder="Pesquisar Pokemon" type="text">
+        <img id="searchButton" class="main_Search__SearchBox-Image" src="./assets/icon_search.svg" alt="Pesquisar" />
       </section>
-
-
-
-    </section>
-
-
-
-
+    </form>
 
     <!--  Area de Cards  -->
     <section class="main_Cards">
       <ul class="main_Cards__List">
-
 
         <!--  Card 1 (Categorias)  -->
         <a class="main_Cards__List-Card categorias" href="categorias.html" id="categorys">
@@ -93,33 +82,28 @@
           <p class="main_Cards__List-Card--Text">Categorias</p>
         </a>
 
-
         <!--  Card 2  (Regioes) -->
         <a class="main_Cards__List-Card categorias" href="regioes.html" id="regions">
-          <img class="main_Cards__List-Card--Image" src="./assets/icon_regions.svg"/>
+          <img class="main_Cards__List-Card--Image" src="./assets/icon_regions.svg" />
           <p class="main_Cards__List-Card--Text">Regioes</p>
         </a>
 
 
         <!--  Card 3 (Favoritos)  -->
         <a class="main_Cards__List-Card categorias" href="favoritos.html" id="favorites">
-          <img class="main_Cards__List-Card--Image" src="./assets/icon_fav.svg"/>
+          <img class="main_Cards__List-Card--Image" src="./assets/icon_fav.svg" />
           <p class="main_Cards__List-Card--Text">Favoritos</p>
         </a>
 
 
         <!--  Card 4 (Pokedex)  -->
         <a class="main_Cards__List-Card categorias" href="pokedex.html" id="pokedex">
-          <img class="main_Cards__List-Card--Image" src="./assets/icon_pokedex.svg"/>
+          <img class="main_Cards__List-Card--Image" src="./assets/icon_pokedex.svg" />
           <p class="main_Cards__List-Card--Text">Pokedex</p>
         </a>
-
-
       </ul>
     </section>
-  
-  
-  
   </main>
+  <script src="api.js"></script>
 </body>
 </htm|>

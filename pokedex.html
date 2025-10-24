@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +9,8 @@
   <link rel="stylesheet" href="./styles/pokedex.css">
   <title>Pokedex</title>
 </head>
+
 <body>
-
-
 
   <!--  Header de Navegação entre Paginas  -->
   <header class="header">
@@ -26,202 +26,72 @@
         <a class="header_Navbar__List-Link Navbar_Link" id="linkPokedex" href="./pokedex.html">Pokedex</a>
         <a class="header_Navbar__List-Link Navbar_Link" id="linkRegions" href="./regioes.html">Regiões</a>
         <a class="header_Navbar__List-Link Navbar_Link" id="linkUser" href="perfil.html">
-          <img src="./assets/icon_user.svg"/>
+          <img src="./assets/icon_user.svg" />
         </a>
       </ul>
-
-
     </nav>
   </header>
- 
-
-
-
-
 
   <!--  Conteúdo Pincipal  -->
   <main class="main">
 
-      
+
     <!--  Area de Pesquisa (Inputs, InputBoxs e Button )  -->
-    <section class="main_Search">
+    <form class="main_Search">
 
+      <!--  Input de Pesquisa [id: Pokedex_InputBar]  USAR NO JS -->
+      <input id="Pokedex_InputBar" class="main_Search__SearchBar" placeholder="Digite o nome do Pokemon">
 
-
-      <!--  Input de Pesquisa [id: Pokedex_InputBar]  -->
-      <input 
-        id="Pokedex_InputBar"
-        class="main_Search__SearchBar" 
-        placeholder="Digite o nome do Pokemon"
-      >
-
-
-
-      <!--  Ordenador de Categorias [id:Pokedex_InputCategorySelect]  -->
+      <!--  Ordenador de Categorias [id:Pokedex_InputCategorySelect] USAR NO JS DPS  -->
       <label class="main_Search__Category-Label" for="Pokedex_InputCategorySelect">Categorias
-      <select 
-        id="Pokedex_InputCategorySelect" 
-        class="main_Search__Category-Select" 
-        aria-label="Categorias"
-      >
-        <option class="main_Search__Category-Select--opt" value="all">Todas as categorias</option>
-        <option class="main_Search__Category-Select--opt" value="normal">Normal</option>
-        <option class="main_Search__Category-Select--opt" value="fire">Fogo</option>
-        <option class="main_Search__Category-Select--opt" value="water">Água</option>
-        <option class="main_Search__Category-Select--opt" value="plant">Planta</option>
-        <option class="main_Search__Category-Select--opt" value="fly">Voador</option>
-        <option class="main_Search__Category-Select--opt" value="fighter">Lutador</option>
-        <option class="main_Search__Category-Select--opt" value="poison">Venenoso</option>
-        <option class="main_Search__Category-Select--opt" value="eletric">Elétrico</option>
-        <option class="main_Search__Category-Select--opt" value="ground">Terrestre</option>
-        <option class="main_Search__Category-Select--opt" value="rock">Pedra</option>
-        <option class="main_Search__Category-Select--opt" value="psy">Psiquico</option>
-        <option class="main_Search__Category-Select--opt" value="ice">Gelo</option>
-        <option class="main_Search__Category-Select--opt" value="insect">Inseto</option>
-        <option class="main_Search__Category-Select--opt" value="ghost">Fantasma</option>
-        <option class="main_Search__Category-Select--opt" value="ox">Aço</option>
-        <option class="main_Search__Category-Select--opt" value="dragon">Dragão</option>
-        <option class="main_Search__Category-Select--opt" value="batman">Sombrio</option>
-        <option class="main_Search__Category-Select--opt" value="fairy">Fada</option>
-      </select>
+        <select id="Pokedex_InputCategorySelect" class="main_Search__Category-Select" aria-label="Categorias">
+          <option class="main_Search__Category-Select--opt" value="all">Todas as categorias</option>
+          <option class="main_Search__Category-Select--opt" value="normal">Normal</option>
+          <option class="main_Search__Category-Select--opt" value="fire">Fogo</option>
+          <option class="main_Search__Category-Select--opt" value="water">Água</option>
+          <option class="main_Search__Category-Select--opt" value="plant">Planta</option>
+          <option class="main_Search__Category-Select--opt" value="fly">Voador</option>
+          <option class="main_Search__Category-Select--opt" value="fighter">Lutador</option>
+          <option class="main_Search__Category-Select--opt" value="poison">Venenoso</option>
+          <option class="main_Search__Category-Select--opt" value="eletric">Elétrico</option>
+          <option class="main_Search__Category-Select--opt" value="ground">Terrestre</option>
+          <option class="main_Search__Category-Select--opt" value="rock">Pedra</option>
+          <option class="main_Search__Category-Select--opt" value="psy">Psiquico</option>
+          <option class="main_Search__Category-Select--opt" value="ice">Gelo</option>
+          <option class="main_Search__Category-Select--opt" value="insect">Inseto</option>
+          <option class="main_Search__Category-Select--opt" value="ghost">Fantasma</option>
+          <option class="main_Search__Category-Select--opt" value="ox">Aço</option>
+          <option class="main_Search__Category-Select--opt" value="dragon">Dragão</option>
+          <option class="main_Search__Category-Select--opt" value="batman">Sombrio</option>
+          <option class="main_Search__Category-Select--opt" value="fairy">Fada</option>
+        </select>
       </label>
-
-
 
       <!--  Ordenador Pokemons por Numero (id) ou Nome (A-Z) [id: Pokedex_InputOrderSelect]  -->
       <label class="main_Search__Order" for="sortSelect">Ordenar por
 
-        <select 
-          id="Pokedex_InputOrderSelect" 
-          class="main_Search__Order-Select"
-          aria-label="Ordenar"
-        >
+        <select id="Pokedex_InputOrderSelect" class="main_Search__Order-Select" aria-label="Ordenar">
           <option class="main_Search__Order-Select--Opt" value="num">Ordenar por nº</option>
           <option class="main_Search__Order-Select--Opt" value="name">Nome</option>
         </select>
       </label>
 
-
-
       <!--  Botao de Submit do InputBar [id: Pokedex_ButtonSubmit]  -->
-      <button 
-        id="Pokedex_ButtonSubmit"
-        class="main_Search__Button"
-      >
-        <img class="main_Search__Button-icon" href="./assets/icon_search.svg"/>
+      <button id="Pokedex_ButtonSubmit" class="main_Search__Button">
+        <img class="main_Search__Button-icon" src="./assets/icon_search.svg" />
       </button>
 
+    </form>
 
-
-    </section>
-
-
-
-
-      <!--  Lista de Cards [id: Pokedex_CardsList]  -->
-      <ul 
-        id="Pokedex_CardsList" 
-        class="main_List"
-      >
-        
-
-
-        <!--  Card 1 [class: Pokedex_Card]  -->
-        <a 
-          href="./pokemon.html" 
-          class="main_List__Card Pokedex_Card"
-        >
-
-
-
-        <!--  Parte Superior do Card (Id e Btn pra favoritar) [button id: Pokedex_CardButton] [Pokemon id: Pokedex_CardId]  -->
-          <div class="main_List__Card-Top">
-            <p class="main_List__Card-Top--Index">[  Pokemon ID  ]</p>
-
-
-            <button  
-              id="Pokedex_CardButton"
-              class="main_List__Card-Top--Icon"
-            >
-              <img 
-                class="main_List__Card-Top--IconImage" 
-                src="./assets/icon_star.svg"
-              />
-            </button>
-          </div>
-
-
-
-          <!--  Area da Imagem do Card  -->
-          <figure class="main_List__Image">
-            <img class="main_List__Image-Img" src="[  URL da Imagem  ]"/>
-          </figure>
-
-
-
-          <!--  Nome do Pokemon [Nome id: Pokedex_CardName]  -->
-          <section   
-            class="main_List__Section"
-          >
-            <p class="main_List__Section-Text">[  Nome do Pokemon  ]</p>
-          </section>
-
-
-
-        </a>
-
-
-
-
-
-        <!--  Card 2 [class: Pokedex_Card]  -->
-        <a 
-          href="./pokemon.html" 
-          class="main_List__Card Pokedex_Card"
-        >
-
-
-
-        <!--  Parte Superior do Card (Id e Btn pra favoritar) [button id: Pokedex_CardButton] [Pokemon id: Pokedex_CardId]  -->
-          <div class="main_List__Card-Top">
-            <p class="main_List__Card-Top--Index">[  Pokemon ID  ]</p>
-
-
-            <button  
-              id="Pokedex_CardButton"
-              class="main_List__Card-Top--Icon"
-            >
-              <img 
-                class="main_List__Card-Top--IconImage" 
-                src="./assets/icon_star.svg"
-              />
-            </button>
-          </div>
-
-
-
-          <!--  Area da Imagem do Card  -->
-          <figure class="main_List__Image">
-            <img class="main_List__Image-Img" src="[  URL da Imagem  ]"/>
-          </figure>
-
-
-
-          <!--  Nome do Pokemon [Nome id: Pokedex_CardName]  -->
-          <section   
-            class="main_List__Section"
-          >
-            <p class="main_List__Section-Text">[  Nome do Pokemon  ]</p>
-          </section>
-
-
-
-        </a>
-
-
-
-      </section>
-    </main>
-  </div>
+    <!-- Lista de Cards (gerada dinamicamente pelo JavaScript) -->
+    <ul id="Pokedex_CardsList" class="main_List">
+    </ul>
+    <!-- Botão para carregar mais -->
+    <div class="carregarmais">
+      <button id="botaoMais" class="carregarmais">⟳</button>
+    </div>
+  </main>
+  <script src="api.js"></script>
 </body>
+
 </html>

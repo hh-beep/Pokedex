@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 |<html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="./assets/favicon.png"> 
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
   <link rel="stylesheet" href="./styles/base.css">
-  <link rel="stylesheet" href="./styles/perfil.css"> 
+  <link rel="stylesheet" href="./styles/perfil.css">
   <title>Pokedex</title>
 </head>
+
 <body>
-
-
-
-
   <!--  Header de Navegação entre Paginas  -->
   <header class="header">
     <nav class="header_Navbar">
@@ -27,38 +25,22 @@
         <a class="header_Navbar__List-Link Navbar_Link" id="linkPokedex" href="./pokedex.html">Pokedex</a>
         <a class="header_Navbar__List-Link Navbar_Link" id="linkRegions" href="./regioes.html">Regiões</a>
         <a class="header_Navbar__List-Link Navbar_Link" id="linkUser" href="perfil.html">
-          <img src="./assets/icon_user.svg"/>
+          <img src="./assets/icon_user.svg" />
         </a>
       </ul>
 
-
     </nav>
   </header>
-
-
-
-
   <!--  Conteudo Principal  -->
   <main>
-
-
-
     <!--  Imagem do Pokemon [ image url id: Pokemon_InfosImageURL]  -->
     <figure class="main_Figure">
-      <img 
-        id="Pokemon_InfosImageURL"
-        class="main_Figure__Image"
-        src="charizard.png" 
-        alt="Imagem do Charizard"
-      >
+      <img id="Pokemon_InfosImageURL" class="main_Figure__Image" alt="Imagem do Pokémon">
     </figure>
 
 
     <!--  Informacoes do Pokemon  -->
     <section class="main_Infos">
-
-
-
       <!--  Informações Principais do Pokemon (Nome, tipo e ID)  -->
       <!--  
         [ Pokemon ID id:      Pokemon_InfosId ] 
@@ -66,32 +48,13 @@
         [ Lista de Tipos id:  Pokemon_InfosTypes ]  
       -->
       <section class="main_Infos__Principais">
+        <h2 id="Pokemon_InfosId" class="main_Infos__Principais-Id"></h2>
+        <h2 id="Pokemon_InfosName" class="main_Infos__Principais-Name"></h2>
+        <ul id="Pokemon_InfosTypes" class="main_Infos__Principais-Lista">
 
-
-        <h2 
-          id="Pokemon_InfosId" 
-          class="main_Infos__Principais-Id"
-        >[  ID do Pokemon  ]</h2>
-
-
-        <h2 
-          id="Pokedmon_InfosName" 
-          class="main_Infos__Principais-Name"
-        >Pokemon: [  Nome do Pokemon  ]</h2>
-
-
-        <ul
-          id="Pokemon_InfosTypes"
-          class="main_Infos__Principais-Lista"
-        >
           <!--  Tipos do Pokemon aqui dentro  -->
         </ul>
       </section>
-
-
-
-
-
       <!--  Informacoes dos Status do Pokemon (vida, forca etc...)  -->
       <section class="main_Infos__Status">
 
@@ -106,18 +69,15 @@
           [ Speed id:   Pokemon_InfosSpeed ]
         -->
         <ul class="main_Infos__Status-List">
-          <li id="Pokemon_InfosHP" class="main_infos__Status-List--Infos">HP: [  HP  ]</li>
-          <li id="Pokemon_InfosAttack" class="main_infos__Status-List--Infos">Attack: [  ATTACK  ]</li>
-          <li id="Pokemon_InfosDefense" class="main_infos__Status-List--Infos">Defense: [  DEFENSE  ]</li>
-          <li id="Pokemon_InfosSpeed" class="main_infos__Status-List--Infos">Speed: [  SPEED  ]</li>
+          <li id="Pokemon_InfosHP" class="main_infos__Status-List--Infos">HP: [ HP ]</li>
+          <li id="Pokemon_InfosAttack" class="main_infos__Status-List--Infos">Attack: [ ATTACK ]</li>
+          <li id="Pokemon_InfosDefense" class="main_infos__Status-List--Infos">Defense: [ DEFENSE ]</li>
+          <li id="Pokemon_InfosSpeed" class="main_infos__Status-List--Infos">Speed: [ SPEED ]</li>
         </ul>
       </section>
-
-      
     </section>
   </main>
-  
-
-
+  <script src="pokemon.js"></script>
 </body>
+
 </html>

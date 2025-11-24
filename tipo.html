@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  <link rel="stylesheet" href="./styles/base.css" />
+  <title>Pokedex</title>
+</head>
+<body>
+
+  <!-- Header de Navegação -->
+  <header class="header">
+    <nav class="header_Navbar">
+      <a class="header_Navbar__Title" href="./projeto.html">le Pokedex</a>
+      <ul class="header_Navbar__List">
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkHome" href="./index.html">Inicio</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkPokedex" href="./pokedex.html">Pokedex</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkRegions" href="./regioes.html">Regiões</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkCategories" href="./categorias.html">Categorias</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkUser" href="favoritos.html">
+          <img src="./assets/icon_user.svg" alt="Perfil do usuário" />
+        </a>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="main">
+    <section class="main_Section">
+      <h2 class="main_Section__Tittle">Pokémons do tipo: [TIPO]</h2>
+    </section>
+
+    <!-- Lista de Pokémon -->
+    <ul id="Tipo_List" class="main_List">
+      <!-- Cards serão inseridos aqui pelo JavaScript -->
+    </ul>
+
+    <!-- Botão Carregar Mais -->
+    <div class="main_More">
+      <button id="Tipo_ButtonMore" class="main_More__Button carregarmais">
+        Carregar Mais ⟳
+      </button>
+    </div>
+  </main>
+
+  <!-- Script -->
+  <script src="./scripts/tipo.js"></script>
+</body>
+</html>

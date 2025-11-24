@@ -10,337 +10,96 @@
 </head>
 <body>
 
-
-  <!--  Header de Navegação entre Paginas  -->
+  <!-- Header de Navegação entre Paginas -->
   <header class="header">
     <nav class="header_Navbar">
-
-
-      <!--  Titulo da Navegação-->
       <a class="header_Navbar__Title" href="./projeto.html">le Pokedex</a>
-
-      <!--  Lista de Paginas  -->
       <ul class="header_Navbar__List">
         <a class="header_Navbar__List-Link Navbar_Link" id="linkHome" href="./index.html">Inicio</a>
         <a class="header_Navbar__List-Link Navbar_Link" id="linkPokedex" href="./pokedex.html">Pokedex</a>
         <a class="header_Navbar__List-Link Navbar_Link" id="linkRegions" href="./regioes.html">Regiões</a>
-        <a class="header_Navbar__List-Link Navbar_Link" id="linkUser" href="perfil.html">
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkCategories" href="./categorias.html">Categorias</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkUser" href="favoritos.html">
           <img src="./assets/icon_user.svg"/>
         </a>
       </ul>
-
-
     </nav>
   </header>
 
-
-
-
-
-  <!--  Conteudo Principal  -->
+  <!-- Conteudo Principal -->
   <main class="main">
     
-    <!--  Titulo de Exibicao Principal da Pagina  -->
+    <!-- Titulo de Exibicao Principal da Pagina -->
     <section class="main_Section">
-      <h1 class="main_Section__Tittle">Descubra as Principais Categorias</h1>
+      <h1 class="main_Section__Tittle">Escolha uma Categoria</h1>
+      <p class="main_Section__Text">~Tipos de Pokémon encontrados na natureza~</p>
     </section>
 
-
-
-    <!--  Lista das Principais Categorias  -->
-    <ul class="main_List"> 
-
-
-
-      <!--  Categoria 1 (fogo)  -->
-      <li class="main_List__Category">
-
-
-        <!--  Area de Nome da Categoria  -->
-        <section class="main_List__Category-Text">
-          <img class="main_List__Category-Text-Icon" src="./assets/categorys/fire.svg"/> <!--  Icone da Categoria  -->
-          <h2 class="main_List__Category-Text-Tittle">Fogo</h2>
-
-          <!--  Esse Link leva à pokedex.html-->
-          <a href="./pokedex.html"  class="main_List__Category-Text-Button">Ver todos</a>
-        </section>
-
-
-
-        <!--  Lista de Cards de Pokemons dessa categoria  -->
-        <ul class="CategoryList">
-        
-
-          <!--  Card 1 [class: Pokedex_Card]  -->
-          <a 
-            href="./pokemon.html" 
-            class="main_List__Card Pokedex_Card"
-          >
-
-
-
-          <!--  Parte Superior do Card (Id e Btn pra favoritar) [button id: Pokedex_CardButton] [Pokemon id: Pokedex_CardId]  -->
-            <div class="main_List__Card-Top">
-              <p class="main_List__Card-Top--Index">[  Pokemon ID  ]</p>
-
-
-              <button  
-                id="Pokedex_CardButton"
-                class="main_List__Card-Top--Icon"
-              >
-                <img 
-                  class="main_List__Card-Top--IconImage" 
-                  src="./assets/icon_star.svg"
-                />
-              </button>
-            </div>
-
-
-
-            <!--  Area da Imagem do Card  -->
-            <figure class="main_List__Image">
-              <img class="main_List__Image-Img" src="[  URL da Imagem  ]"/>
-            </figure>
-
-
-
-            <!--  Nome do Pokemon [Nome id: Pokedex_CardName]  -->
-            <section   
-              class="main_List__Section"
-            >
-              <p class="main_List__Section-Text">[  Nome do Pokemon  ]</p>
-            </section>
-
-
-
-          </a>
-
-
-
-        </ul>
-      </li>
-    
-
-
-
-
-      <!--  Categoria 2 (Planta)  -->
-      <li class="main_List__Category">
-
-
-
-        <!--  Area de Nome da Categoria  -->
-        <section class="main_List__Category-Text">
-          <img class="main_List__Category-Text-Icon" src="./assets/categorys/grass.svg"/> <!--  Icone da Categoria  -->
-          <h2 class="main_List__Category-Text-Tittle">Planta</h2>
-
-          <!--  Esse Link leva à pokedex.html-->
-          <a href="./pokedex.html"  class="main_List__Category-Text-Button">Ver todos</a>
-        </section>
-
-
-
-        <!--  Lista de Cards de Pokemons dessa categoria  -->
-        <ul class="CategoryList">
-        
-
-          <!--  Card 1 [class: Pokedex_Card]  -->
-          <a 
-            href="./pokemon.html" 
-            class="main_List__Card Pokedex_Card"
-          >
-
-
-
-          <!--  Parte Superior do Card (Id e Btn pra favoritar) [button id: Pokedex_CardButton] [Pokemon id: Pokedex_CardId]  -->
-            <div class="main_List__Card-Top">
-              <p class="main_List__Card-Top--Index">[  Pokemon ID  ]</p>
-
-
-              <button  
-                id="Pokedex_CardButton"
-                class="main_List__Card-Top--Icon"
-              >
-                <img 
-                  class="main_List__Card-Top--IconImage" 
-                  src="./assets/icon_star.svg"
-                />
-              </button>
-            </div>
-
-
-
-            <!--  Area da Imagem do Card  -->
-            <figure class="main_List__Image">
-              <img class="main_List__Image-Img" src="[  URL da Imagem  ]"/>
-            </figure>
-
-
-
-            <!--  Nome do Pokemon [Nome id: Pokedex_CardName]  -->
-            <section   
-              class="main_List__Section"
-            >
-              <p class="main_List__Section-Text">[  Nome do Pokemon  ]</p>
-            </section>
-
-
-
-          </a>
-
-
-
-        </ul>
-      </li>
-
-
-
-
-
-      <!--  Categoria 3 ((Eletricos)  -->
-      <li class="main_List__Category">
-
-
-        <!--  Area de Nome da Categoria  -->
-        <section class="main_List__Category-Text">
-          <img class="main_List__Category-Text-Icon" src="./assets/categorys/eletric.svg"/> <!--  Icone da Categoria  -->
-          <h2 class="main_List__Category-Text-Tittle">Eletrico</h2>
-
-          <!--  Esse Link leva à pokedex.html-->
-          <a href="./pokedex.html"  class="main_List__Category-Text-Button">Ver todos</a>
-        </section>
-
-
-
-        <!--  Lista de Cards de Pokemons dessa categoria  -->
-        <ul class="CategoryList">
-        
-
-          <!--  Card 1 [class: Pokedex_Card]  -->
-          <a 
-            href="./pokemon.html" 
-            class="main_List__Card Pokedex_Card"
-          >
-
-
-
-          <!--  Parte Superior do Card (Id e Btn pra favoritar) [button id: Pokedex_CardButton] [Pokemon id: Pokedex_CardId]  -->
-            <div class="main_List__Card-Top">
-              <p class="main_List__Card-Top--Index">[  Pokemon ID  ]</p>
-
-
-              <button  
-                id="Pokedex_CardButton"
-                class="main_List__Card-Top--Icon"
-              >
-                <img 
-                  class="main_List__Card-Top--IconImage" 
-                  src="./assets/icon_star.svg"
-                />
-              </button>
-            </div>
-
-
-
-            <!--  Area da Imagem do Card  -->
-            <figure class="main_List__Image">
-              <img class="main_List__Image-Img" src="[  URL da Imagem  ]"/>
-            </figure>
-
-
-
-            <!--  Nome do Pokemon [Nome id: Pokedex_CardName]  -->
-            <section   
-              class="main_List__Section"
-            >
-              <p class="main_List__Section-Text">[  Nome do Pokemon  ]</p>
-            </section>
-
-
-
-          </a>
-      </li>
-
-
-
-
-      <!--  Categoria 4 (Agua)  -->
-      <li class="main_List__Category">
-
-
-        <!--  Area de Nome da Categoria  -->
-        <section class="main_List__Category-Text">
-          <img class="main_List__Category-Text-Icon" src="./assets/categorys/water.svg"/> <!--  Icone da Categoria  -->
-          <h2 class="main_List__Category-Text-Tittle">Agua</h2>
-
-          <!--  Esse Link leva à pokedex.html-->
-          <a href="./pokedex.html"  class="main_List__Category-Text-Button">Ver todos</a>
-        </section>
-
-
-
-        <!--  Lista de Cards de Pokemons dessa categoria  -->
-        <ul class="CategoryList">
-        
-
-          <!--  Card 1 [class: Pokedex_Card]  -->
-          <a 
-            href="./pokemon.html" 
-            class="main_List__Card Pokedex_Card"
-          >
-
-
-
-          <!--  Parte Superior do Card (Id e Btn pra favoritar) [button id: Pokedex_CardButton] [Pokemon id: Pokedex_CardId]  -->
-            <div class="main_List__Card-Top">
-              <p class="main_List__Card-Top--Index">[  Pokemon ID  ]</p>
-
-
-              <button  
-                id="Pokedex_CardButton"
-                class="main_List__Card-Top--Icon"
-              >
-                <img 
-                  class="main_List__Card-Top--IconImage" 
-                  src="./assets/icon_star.svg"
-                />
-              </button>
-            </div>
-
-
-
-            <!--  Area da Imagem do Card  -->
-            <figure class="main_List__Image">
-              <img class="main_List__Image-Img" src="[  URL da Imagem  ]"/>
-            </figure>
-
-
-
-            <!--  Nome do Pokemon [Nome id: Pokedex_CardName]  -->
-            <section   
-              class="main_List__Section"
-            >
-              <p class="main_List__Section-Text">[  Nome do Pokemon  ]</p>
-            </section>
-
-
-
-          </a>
-
-
-      </li>
+    <!-- Lista de Categorias (Tipos) -->
+    <ul class="main_List">
+      
+      <!-- Fogo -->
+      <a href="./tipo.html?tipo=fire" class="main_List__Card">
+        <img src="./assets/categorys/fire.svg" class="main_List__Card-Icon"/>
+        <h3 class="main_List__Card-Text">Fogo</h3>
+      </a>
+
+      <!-- Água -->
+      <a href="./tipo.html?tipo=water" class="main_List__Card">
+        <img src="./assets/categorys/water.svg" class="main_List__Card-Icon"/>
+        <h3 class="main_List__Card-Text">Água</h3>
+      </a>
+
+      <!-- Planta -->
+      <a href="./tipo.html?tipo=grass" class="main_List__Card">
+        <img src="./assets/categorys/grass.svg" class="main_List__Card-Icon"/>
+        <h3 class="main_List__Card-Text">Planta</h3>
+      </a>
+
+      <!-- Elétrico -->
+      <a href="./tipo.html?tipo=electric" class="main_List__Card">
+        <img src="./assets/categorys/eletric.svg" class="main_List__Card-Icon"/>
+        <h3 class="main_List__Card-Text">Elétrico</h3>
+      </a>
+
+      <!-- Gelo -->
+      <a href="./tipo.html?tipo=ice" class="main_List__Card">
+        <img src="./assets/categorys/ice.svg" class="main_List__Card-Icon"/>
+        <h3 class="main_List__Card-Text">Gelo</h3>
+      </a>
+
+      <!-- Lutador -->
+      <a href="./tipo.html?tipo=fighting" class="main_List__Card">
+        <img src="./assets/categorys/fighter.svg" class="main_List__Card-Icon"/>
+        <h3 class="main_List__Card-Text">Lutador</h3>
+      </a>
+
+      <!-- Venenoso -->
+      <a href="./tipo.html?tipo=poison" class="main_List__Card">
+        <img src="./assets/categorys/poison.svg" class="main_List__Card-Icon"/>
+        <h3 class="main_List__Card-Text">Venenoso</h3>
+      </a>
+
+      <!-- Terra -->
+      <a href="./tipo.html?tipo=ground" class="main_List__Card">
+        <img src="./assets/categorys/ground.svg" class="main_List__Card-Icon"/>
+        <h3 class="main_List__Card-Text">Terra</h3>
+      </a>
+
+      <!-- Voador -->
+      <a href="./tipo.html?tipo=flying" class="main_List__Card">
+        <img src="./assets/categorys/fly.svg" class="main_List__Card-Icon"/>
+        <h3 class="main_List__Card-Text">Voador</h3>
+      </a>
+
+      <!-- Psíquico -->
+      <a href="./tipo.html?tipo=psychic" class="main_List__Card">
+        <img src="./assets/categorys/psy.svg" class="main_List__Card-Icon"/>
+        <h3 class="main_List__Card-Text">Psíquico</h3>
+      </a>
 
     </ul>
-
-
-
-
-    <!--  Area para levar à Pokedex.html (para mostrar todos os pokemons)-->
-    <section class="main_More">
-      <a href="./pokedex.html" class="main_More__Button">Ver mais Categorias / Pokemons </a>
-    </section>
   </main>
-
 
 </body>
 </html>

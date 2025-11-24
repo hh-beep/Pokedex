@@ -1,3 +1,109 @@
 .main {
   width: 100%;
 }
+<<<<<<< Updated upstream
+=======
+
+.main_List__Card-Top--Index {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.main_List__Card-Top--Icon {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  overflow-y: hidden;
+}
+
+.main_List__Card-Top--Icon:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.main_List__Card-Top--IconImage {
+  width: 2rem;
+  height: 2rem;
+}
+
+.main_List__Image {
+  margin: 1rem 0;
+  image-rendering: pixelated;
+  overflow-y: hidden;
+}
+
+.main_List__Image-Img {
+  width: 10rem;
+  height: 10rem;
+  transform :scale(1.1);
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.main_List__Card:hover .main_List__Image-Img {
+  transform: scale(1.1);
+}
+
+.main_List__Section-Text {
+  text-align: center;
+  font-weight: 600;
+  margin: 0;
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.main_List__Card:hover .main_List__Section p {
+  color: #000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+.main_More {
+  display: flex;
+  width: 100%;
+  height: 20vh;
+  margin: 3rem 0;
+  justify-content: space-around;
+  align-items: center;
+}
+.main_More__Button {
+  height: 50%;
+  width: 30%;
+  background-color: #fff;
+  border: 3px solid #2c2c2c;
+  box-shadow: 5px 5px #2c2c2c;
+  font-size: 1.5rem;
+}
+.main_More__Button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Estrela normal (cinza) */
+.main_List__Card-Top--Icon .main_List__Card-Top--IconImage {
+  filter: grayscale(100%) brightness(0.6);
+  transition: filter 0.2s ease;
+}
+
+/* Estrela favoritada (amarela/dourada) */
+.main_List__Card-Top--Icon.favoritado .main_List__Card-Top--IconImage {
+  filter: brightness(0) saturate(100%) invert(85%) sepia(90%) saturate(1000%) hue-rotate(360deg);
+}
+
+/* Hover suave */
+.main_List__Card-Top--Icon:hover .main_List__Card-Top--IconImage {
+  filter: grayscale(0%) brightness(1.1);
+}
+>>>>>>> Stashed changes

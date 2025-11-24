@@ -3,7 +3,7 @@ async function carregarPokemon() {
   // Pego os dados que foram salvos no localStorage (quando o usuário clicou no card)
   const dadosSalvos = localStorage.getItem('pokemon_selecionado');
   
-  // Se não tiver nenhum dado salvo, mostro uma mensagem amigável
+  // Se não tiver nenhum dado salvo, mostro uma mensagem tops
   if (!dadosSalvos) {
     document.body.innerHTML = '<h1 style="text-align:center; margin-top:50px;">Nenhum Pokémon selecionado!</h1>';
     return;
@@ -12,7 +12,7 @@ async function carregarPokemon() {
   // Transformo os dados de volta em um objeto JavaScript
   const data = JSON.parse(dadosSalvos);
 
-  // Atualizo o número do Pokémon (ex: #025) com zeros à esquerda
+  // Atualizo o número do Pokémon (ex:#025) com zeros à esquerda
   document.getElementById('Pokemon_InfosId').textContent = `#${String(data.id).padStart(3, '0')}`;
 
   // Atualizo o nome com a primeira letra maiúscula (ex: "pikachu" → "Pikachu")
@@ -35,7 +35,7 @@ async function carregarPokemon() {
     typesList.appendChild(li);
   });
 
-  // Organizo os status (HP, Ataque, Defesa, Velocidade) em um objeto fácil de usar
+  // Organizo os status (HP, Ataque, Defesa, Velocidade) em um objeto mais easy de usar
   const stats = {};
   data.stats.forEach(stat => {
     stats[stat.stat.name] = stat.base_stat;
@@ -51,6 +51,6 @@ async function carregarPokemon() {
 // Quando a página terminar de carregar, executa a função acima
 carregarPokemon();
 
-// Quando o usuário sair ou recarregar a página, limpo os dados salvos
+// Quando o usuário sair ou recarregar a página, limpa os dados salvos
 // Isso evita que ele volte e veja o mesmo Pokémon por acidente
 window.addEventListener('beforeunload', () =>{})

@@ -15,7 +15,7 @@ let allPokemonUrls = [];
 let loadedCount = 0;
 const limit = 20;
 
-// Função de card com favoritos (mesmo comportamento da pokedex.html)
+// ✅ Função de card com favoritos (mesmo comportamento da pokedex.html)
 function criarCard(pokemon) {
   const id = pokemon.id;
   const nome = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
@@ -55,7 +55,7 @@ function criarCard(pokemon) {
     window.location.href = './pokemon.html';
   });
 
-  // Clique na ESTRELA → favoritar/desfavoritar 
+  // Clique na ESTRELA → favoritar/desfavoritar (sem redirecionar)
   const starBtn = li.querySelector('.main_List__Card-Top--Icon');
   starBtn.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -80,7 +80,7 @@ function criarCard(pokemon) {
     }
 
     localStorage.setItem('favoritos', JSON.stringify(lista));
-    // 
+    // ✅ Nenhum redirecionamento aqui!
   });
 
   return li;

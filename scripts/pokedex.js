@@ -29,16 +29,17 @@ async function searchRedirectPokemons(pokemonName) {
 function criarCard(pokemon, isFromSearch = false) {
     let id, nome, sprite, nameForApi;
 
+      console.log(pokemon.name)
     if (isFromSearch) {
         id = pokemon.id;
         nome = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
         nameForApi = pokemon.name;
-        sprite = `https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/${pokemon.name}.png`;
+        sprite = `https://img.pokemondb.net/sprites/black-white/normal/${pokemon.name}.png`;
     } else {
         id = pokemon.url.split('/').filter(Boolean).pop();
         nome = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
         nameForApi = pokemon.name;
-        sprite = `https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/${pokemon.name}.png`;
+        sprite = `https://img.pokemondb.net/sprites/black-white/normal/${pokemon.name}.png`;
     }
 
     const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];

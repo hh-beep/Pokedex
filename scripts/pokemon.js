@@ -28,7 +28,7 @@ async function carregarPokemon() {
   document.getElementById('Pokemon_InfosName').textContent = pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1);
 
   const img = document.getElementById('Pokemon_InfosImageURL');
-  img.src = `https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/${pokemonName}.png`;
+  img.src = `https://img.pokemondb.net/sprites/black-white/normal/${pokemonName}.png`;
   img.alt = pokemonName;
 
   const typesList = document.getElementById('Pokemon_InfosTypes');

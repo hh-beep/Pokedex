@@ -1,0 +1,13 @@
+.main_List {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  list-style: none;
+  background: #eee;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}

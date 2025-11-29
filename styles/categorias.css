@@ -1,108 +1,92 @@
-.main {
-  padding: 20px;
-}
-
-.main_Section h1 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.main_List {
-  list-style: none;
-  padding: 0;
+body {
   margin: 0;
-}
-
-.main_List__Category {
-  margin-bottom: 40px;
-}
-
-.main_List__Category-Text {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.main_List__Category-Text-Icon {
-  width: 30px;
-  height: 30px;
-}
-
-.main_List__Category-Text-Tittle {
-  font-size: 24px;
-}
-
-.main_List__Category-Text-Button {
-  display: none;
-}
-
-.CategoryList {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
   padding: 0;
-  list-style: none;
 }
 
-.CategoryList_Card {
-  display: block;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-  text-align: center;
-  text-decoration: none;
-  padding: 10px;
+.header {
+  width: 100%;
+  padding: 10px 0;
 }
 
-.CategoryList_Card-Top {
+.header_Navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.CategoryList_Card-Top--Index {
-  font-size: 14px;
+.header_Navbar__List {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.CategoryList_Card-Top--Icon img {
-  width: 20px;
-  height: 20px;
+.header_Navbar__List-Link {
+  text-decoration: none;
 }
 
-.CategoryList_Image__Img {
+.main {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.main_Section {
+  margin-bottom: 20px;
+}
+
+.main_List {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.main_List__Card {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.main_List__Card img {
+  width: 80px;
+  height: 80px;
+}
+
+.main_List__Card-Text {
+  margin-top: 8px;
+}
+
+.main_List {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  padding: 0;
+  list-style: none;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.main_List__Card {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.main_List__Card img {
   width: 100px;
   height: 100px;
 }
 
-.CategoryList_Section__Text {
-  font-size: 16px;
-  color: #000;
-}
-
-.main_More {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.main_More__Button {
-  text-decoration: none;
-  background-color: #ddd;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-
-/* Estrela normal (cinza) */
-.main_List__Card-Top--Icon .main_List__Card-Top--IconImage {
-  filter: grayscale(100%) brightness(0.6);
-  transition: filter 0.2s ease;
-}
-
-/* Estrela favoritada (amarela/dourada) */
-.main_List__Card-Top--Icon.favoritado .main_List__Card-Top--IconImage {
-  filter: brightness(0) saturate(100%) invert(85%) sepia(90%) saturate(1000%) hue-rotate(360deg);
-}
-
-/* Hover suave */
-.main_List__Card-Top--Icon:hover .main_List__Card-Top--IconImage {
-  filter: grayscale(0%) brightness(1.1);
+.main_List__Card-Text {
+  margin-top: 10px;
+  font-size: 18px;
 }

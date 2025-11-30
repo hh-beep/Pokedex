@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -25,7 +25,8 @@
         <a class="header_Navbar__List-Link Navbar_Link" id="linkHome" href="./index.html">Inicio</a>
         <a class="header_Navbar__List-Link Navbar_Link" id="linkPokedex" href="./pokedex.html">Pokedex</a>
         <a class="header_Navbar__List-Link Navbar_Link" id="linkRegions" href="./regioes.html">Regiões</a>
-        <a class="header_Navbar__List-Link Navbar_Link" id="linkUser" href="perfil.html">
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkCategories" href="./categorias.html">Categorias</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkUser" href="favoritos.html">
           <img src="./assets/icon_user.svg" />
         </a>
       </ul>
@@ -38,6 +39,12 @@
   <!--  Conteúdo Pincipal  -->
   <main class="main">
 
+    
+    <section class="main_Section">
+      <h2 class="main_Section__Tittle">~ Pokedex ~</h2>
+    </section>
+
+    
 
     <!--  Area de Pesquisa (Inputs, InputBoxs e Button )  -->
     <form class="main_Search">
@@ -47,37 +54,37 @@
 
       <!--  Ordenador de Categorias [id:Pokedex_InputCategorySelect] USAR NO JS DPS  -->
       <label class="main_Search__Category-Label" for="Pokedex_InputCategorySelect">Categorias
-        <select id="Pokedex_InputCategorySelect" class="main_Search__Category-Select" aria-label="Categorias">
-          <option class="main_Search__Category-Select--opt" value="all">Todas as categorias</option>
-          <option class="main_Search__Category-Select--opt" value="normal">Normal</option>
-          <option class="main_Search__Category-Select--opt" value="fire">Fogo</option>
-          <option class="main_Search__Category-Select--opt" value="water">Água</option>
-          <option class="main_Search__Category-Select--opt" value="plant">Planta</option>
-          <option class="main_Search__Category-Select--opt" value="fly">Voador</option>
-          <option class="main_Search__Category-Select--opt" value="fighter">Lutador</option>
-          <option class="main_Search__Category-Select--opt" value="poison">Venenoso</option>
-          <option class="main_Search__Category-Select--opt" value="eletric">Elétrico</option>
-          <option class="main_Search__Category-Select--opt" value="ground">Terrestre</option>
-          <option class="main_Search__Category-Select--opt" value="rock">Pedra</option>
-          <option class="main_Search__Category-Select--opt" value="psy">Psiquico</option>
-          <option class="main_Search__Category-Select--opt" value="ice">Gelo</option>
-          <option class="main_Search__Category-Select--opt" value="insect">Inseto</option>
-          <option class="main_Search__Category-Select--opt" value="ghost">Fantasma</option>
-          <option class="main_Search__Category-Select--opt" value="ox">Aço</option>
-          <option class="main_Search__Category-Select--opt" value="dragon">Dragão</option>
-          <option class="main_Search__Category-Select--opt" value="batman">Sombrio</option>
-          <option class="main_Search__Category-Select--opt" value="fairy">Fada</option>
-        </select>
+          <select id="Pokedex_InputCategorySelect" class="main_Search__Category-Select" aria-label="Categorias">
+            <option value="all">Todas as categorias</option>
+            <option value="normal">Normal</option>
+            <option value="fire">Fogo</option>
+            <option value="water">Água</option>
+            <option value="grass">Planta</option>          
+            <option value="flying">Voador</option>        
+            <option value="fighting">Lutador</option>
+            <option value="poison">Venenoso</option>
+            <option value="electric">Elétrico</option>    
+            <option value="ground">Terrestre</option>
+            <option value="rock">Pedra</option>
+            <option value="psychic">Psíquico</option>    
+            <option value="ice">Gelo</option>
+            <option value="bug">Inseto</option>           
+            <option value="ghost">Fantasma</option>
+            <option value="steel">Aço</option>            
+            <option value="dragon">Dragão</option>
+            <option value="dark">Sombrio</option>         
+            <option value="fairy">Fada</option>
+          </select>
       </label>
 
-      <!--  Ordenador Pokemons por Numero (id) ou Nome (A-Z) [id: Pokedex_InputOrderSelect]  -->
+      <!--  Ordenador Pokemons por Numero (id) ou Nome (A-Z) [id: Pokedex_InputOrderSelect]  
       <label class="main_Search__Order" for="sortSelect">Ordenar por
 
         <select id="Pokedex_InputOrderSelect" class="main_Search__Order-Select" aria-label="Ordenar">
           <option class="main_Search__Order-Select--Opt" value="num">Ordenar por nº</option>
           <option class="main_Search__Order-Select--Opt" value="name">Nome</option>
         </select>
-      </label>
+      </label>-->
 
       <!--  Botao de Submit do InputBar [id: Pokedex_ButtonSubmit]  -->
       <button id="Pokedex_ButtonSubmit" class="main_Search__Button">

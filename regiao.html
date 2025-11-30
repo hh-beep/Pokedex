@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./assets/favicon.png" />
+  <link rel="stylesheet" href="./styles/regiao.css" />
+  <link rel="stylesheet" href="./styles/base.css" />
+  <title>Pokedex</title>
+</head>
+<body>
+
+  <!-- Header de Navegação entre Páginas -->
+  <header class="header">
+    <nav class="header_Navbar">
+      <!-- Título da Navegação -->
+      <a class="header_Navbar__Title" href="./projeto.html">le Pokedex</a>
+
+      <!-- Lista de Páginas -->
+      <ul class="header_Navbar__List">
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkHome" href="./index.html">Inicio</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkPokedex" href="./pokedex.html">Pokedex</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkRegions" href="./regioes.html">Regiões</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkCategories" href="favoritos.html">Categorias</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkUser" href="./categorias.html">
+          <img src="./assets/icon_user.svg" alt="Perfil do usuário" />
+        </a>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="main">
+    <section class="main_Section">
+      <h2 class="main_Section__Tittle">Pokémons de: [REGIAO]</h2>
+    </section>
+
+    <!-- Lista de Pokémon da região -->
+    <ul id="Regiao_List" class="main_List">
+      <!-- Os cards de Pokémon serão inseridos aqui dinamicamente -->
+    </ul>
+
+    <!--botaozinho -->
+    <div class="main_More">
+      <button class="main_More__Button carregarmais" id="Regiao_ButtonMore">Carregar Mais ⟳</button>
+    </div>
+  </main>
+
+  <script src="./scripts/regiao.js"></script>
+</body>
+</html>

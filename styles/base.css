@@ -72,3 +72,20 @@ body {
 #linkUser img:hover {
   height: 100%;
 }
+
+
+/* Estrela normal (cinza) */
+.main_List__Card-Top--Icon .main_List__Card-Top--IconImage {
+  filter: grayscale(100%) brightness(0.6);
+  transition: filter 0.2s ease;
+}
+
+/* Estrela favoritada (amarela/dourada) */
+.main_List__Card-Top--Icon.favoritado .main_List__Card-Top--IconImage {
+  filter: brightness(0) saturate(100%) invert(85%) sepia(90%) saturate(1000%) hue-rotate(360deg);
+}
+
+/* Hover suave */
+.main_List__Card-Top--Icon:hover .main_List__Card-Top--IconImage {
+  filter: grayscale(0%) brightness(1.1);
+}

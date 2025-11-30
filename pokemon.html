@@ -14,8 +14,6 @@
   <!--  Header de Navegação entre Paginas  -->
   <header class="header">
     <nav class="header_Navbar">
-
-
       <!--  Titulo da Navegação-->
       <a class="header_Navbar__Title" href="./projeto.html">le Pokedex</a>
 
@@ -24,11 +22,11 @@
         <a class="header_Navbar__List-Link Navbar_Link" id="linkHome" href="./index.html">Inicio</a>
         <a class="header_Navbar__List-Link Navbar_Link" id="linkPokedex" href="./pokedex.html">Pokedex</a>
         <a class="header_Navbar__List-Link Navbar_Link" id="linkRegions" href="./regioes.html">Regiões</a>
-        <a class="header_Navbar__List-Link Navbar_Link" id="linkUser" href="perfil.html">
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkCategories" href="./categorias.html">Categorias</a>
+        <a class="header_Navbar__List-Link Navbar_Link" id="linkUser" href="favoritos.html">
           <img src="./assets/icon_user.svg" />
         </a>
       </ul>
-
     </nav>
   </header>
 
@@ -41,24 +39,23 @@
       <img id="Pokemon_InfosImageURL" class="main_Figure__Image" alt="Imagem do Pokémon">
     </figure>
 
-
     <!--  Informacoes do Pokemon  -->
     <section class="main_Infos">
       <!--  Informações Principais do Pokemon (Nome, tipo e ID)  -->
-      <!--  
-        [ Pokemon ID id:      Pokemon_InfosId ] 
-        [ Pokemon Name id:    Pokemon_InfosName ] 
-        [ Lista de Tipos id:  Pokemon_InfosTypes ]  
-      -->
       <section class="main_Infos__Principais">
-        <h2 id="Pokemon_InfosId" class="main_Infos__Principais-Id"></h2>
+        <div class="main_Infos__Principais-Header">
+          <h2 id="Pokemon_InfosId" class="main_Infos__Principais-Id"></h2>
+          <button id="Pokemon_FavoritoBtn" class="main_Infos__FavoritoBtn">
+            <img src="./assets/icon_star.svg" alt="Favoritar" class="main_Infos__FavoritoBtn-Img">
+          </button>
+        </div>
         <h2 id="Pokemon_InfosName" class="main_Infos__Principais-Name"></h2>
         <ul id="Pokemon_InfosTypes" class="main_Infos__Principais-Lista">
-
-          <!--  Tipos do Pokemon aqui dentro  -->
+          <!-- Tipos do Pokémon serão inseridos aqui pelo JavaScript -->
         </ul>
       </section>
-      <!--  Informacoes dos Status do Pokemon (vida, forca etc...)  -->
+
+      <!--  Informacoes dos Status do Pokemon -->
       <section class="main_Infos__Status">
 
         <!--  Titulo  -->
@@ -80,7 +77,6 @@
       </section>
     </section>
   </main>
-
 
   <script src="./scripts/pokemon.js"></script>
 </body>

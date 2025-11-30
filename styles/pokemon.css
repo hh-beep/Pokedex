@@ -12,6 +12,11 @@
 
 
 
+body.White  #Pokemon_InfosId, 
+body.White  #Pokemon_InfosName,
+body.White  #Pokemon_InfosTypes > li.White {
+  color: #2c2c2c !important;
+}
 
 
 .main {
@@ -81,9 +86,6 @@
     cursor: pointer;
 }
 
-
-
-
 .main_Infos__Status {
     height: 50%;
     width: 80%;
@@ -113,4 +115,42 @@
     border: 3px solid #2c2c2c;
     box-shadow: 5px 5px #2c2c2c;
     padding: 0 1rem;
+}
+
+/* Estilo do contêiner do ID + estrela */
+.main_Infos__Principais-Header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Botão de favorito */
+.main_Infos__FavoritoBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.main_Infos__FavoritoBtn:hover {
+  transform: rotate(10deg) scale(1.15);
+}
+
+/* Estrela normal (cinza) */
+.main_Infos__FavoritoBtn-Img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%) brightness(0.6);
+}
+
+/* Estrela favoritada (amarela/dourada) */
+.main_Infos__FavoritoBtn.favoritado .main_Infos__FavoritoBtn-Img {
+  filter: brightness(0) saturate(100%) invert(85%) sepia(90%) saturate(1000%) hue-rotate(360deg);
 }

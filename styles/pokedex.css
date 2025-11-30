@@ -17,6 +17,29 @@ body {
   flex-direction: column;
 }
 
+
+
+
+.main_Section  {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 15%;
+  margin-bottom: 5rem;
+}
+
+.main_Section__Tittle {  font-size: 2.25rem;  }
+.main_Section__Text   {  font-size: 1.325rem;  }
+.main_Section > * {  color: #2c2c2c;  }
+
+
+
+
+
+
+
+
 .main_Search {
   display: flex;
   justify-content: space-around;

@@ -1,3 +1,4 @@
+
 //depois de ter feito toda a requisicao e talz do pokemon
 return `
         <a href="./pokemon.html" class="main_List__Card">

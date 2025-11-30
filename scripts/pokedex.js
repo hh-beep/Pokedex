@@ -3,157 +3,227 @@ const cardsList = document.getElementById('Pokedex_CardsList');
 const botaoMais = document.getElementById('Pokedex_ButtonMore');
 const inputBar = document.getElementById('Pokedex_InputBar');
 const searchButton = document.getElementById('Pokedex_ButtonSubmit');
+const categorySelect = document.getElementById('Pokedex_InputCategorySelect');
 
-
-
-//  -- Definicoes para um Carregamento especifico da API --  //
+//  -- Estados --  //
 let offset = 0;
 const limit = 20;
+let modoPesquisa = false;
+let tipoAtual = 'all'; // 'all' ou nome do tipo (ex: 'fire')
 
-
-
-
-
-//  -- Funcao de Search e redirect para Pokemon.html (ficou repetido em partes do codigo) --  //
-async function searchRedirectPokemons(  pokemonName  ) {
+//  -- Funcao para redirecionar ao clicar no card --  //
+async function searchRedirectPokemons(pokemonName) {
     try {
-        // Busco os dados detalhados do Pokémon na API
-        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${  pokemonName  }`);
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
         if (!res.ok) throw new Error('Pokémon não encontrado');
-      
-
-        //  Salvamento das Infos do Pokemon selecionado pelo LocalStorage []
         const data = await res.json();
         localStorage.setItem('Pokemon', JSON.stringify(data));
-        //  Redirect pra pagina Pokemon.html
         window.location.href = './pokemon.html';
-    } 
-    catch (err) {
+    } catch (err) {
         console.error('Erro ao carregar Pokémon:', err);
         alert('Não foi possível carregar os dados do Pokémon.');
     }
 }
 
-
-
-
-
 //  -- Funcao de Criar o Card do Pokemon --  //
-function criarCard(pokemon) {
+function criarCard(pokemon, isFromSearch = false) {
+    let id, nome, sprite, nameForApi;
 
+      console.log(pokemon.name)
+    if (isFromSearch) {
+        id = pokemon.id;
+        nome = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+        nameForApi = pokemon.name;
+        sprite = `https://img.pokemondb.net/sprites/black-white/normal/${pokemon.name}.png`;
+    } else {
+        id = pokemon.url.split('/').filter(Boolean).pop();
+        nome = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+        nameForApi = pokemon.name;
+        sprite = `https://img.pokemondb.net/sprites/black-white/normal/${pokemon.name}.png`;
+    }
 
+    const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+    const isFavorito = favoritos.some(p => p.name === nameForApi);
 
-  //  ID do Pokémon a partir da URL (ex: "https://pokeapi.co/api/v2/pokemon/25/" → ID = 25)
-  const id = pokemon.url.split('/').filter(Boolean).pop();
-  
-  //  Nome com a primeira letra maiúscula [Capitalized] (ex: "pikachu" vira "Pikachu")
-  const nome = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
-  
-  //  URL do Sprite da imagem do Pokémon (sprite da versão padrão) [1 url e a antiga]
-  //  const sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
-  const sprite = `https://img.pokemondb.net/sprites/lets-go-pikachu-eevee/normal/${pokemon.name}.png`;
-
-
-
-  //  Cardd do  Pokemon
-  const li = document.createElement('li');
-  li.classList.add("main_List__Card");
-  li.classList.add("Pokedex_Card")
-  li.innerHTML = `
-      <div class="main_List__Card-Top">
-        <p class="main_List__Card-Top--Index">#${String(id).padStart(3, '0')}</p>
-        <button class="main_List__Card-Top--Icon">
-          <img class="main_List__Card-Top--IconImage" src="./assets/icon_star.svg" alt="Favoritar"/>
-        </button>
-      </div>
-      <figure class="main_List__Image">
-        <img class="main_List__Image-Img" src="${sprite}" alt="${nome}">
-      </figure>
-      <section class="main_List__Section">
-        <p class="main_List__Section-Text">${nome}</p>
-      </section>
+    const li = document.createElement('li');
+    li.classList.add("main_List__Card", "Pokedex_Card");
+    li.innerHTML = `
+        <div class="main_List__Card-Top">
+            <p class="main_List__Card-Top--Index">#${String(id).padStart(3, '0')}</p>
+            <button class="main_List__Card-Top--Icon ${isFavorito ? 'favoritado' : ''}" 
+                    data-name="${nameForApi}" data-id="${id}">
+                <img class="main_List__Card-Top--IconImage" 
+                     src="./assets/icon_star.svg" 
+                     alt="${isFavorito ? 'Favoritado' : 'Favoritar'}"/>
+            </button>
+        </div>
+        <figure class="main_List__Image">
+            <img class="main_List__Image-Img" src="${sprite}" alt="${nome}" onerror="this.src='./assets/pokeball.png'">
+        </figure>
+        <section class="main_List__Section">
+            <p class="main_List__Section-Text">${nome}</p>
+        </section>
     `;
 
-  
-  li.addEventListener('click', async () => {
-    searchRedirectPokemons(  pokemon.name  )
-  });
+    li.addEventListener('click', (e) => {
+        if (e.target.closest('.main_List__Card-Top--Icon')) return;
+        searchRedirectPokemons(nameForApi);
+    });
 
-  return li;
+    const starBtn = li.querySelector('.main_List__Card-Top--Icon');
+    starBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const name = starBtn.dataset.name;
+        const currentId = starBtn.dataset.id;
+
+        let lista = JSON.parse(localStorage.getItem('favoritos')) || [];
+        const jaFavoritado = lista.some(p => p.name === name);
+
+        if (!jaFavoritado) {
+            lista.push({ name, id: currentId });
+            starBtn.classList.add('favoritado');
+            starBtn.querySelector('img').alt = 'Favoritado';
+        } else {
+            lista = lista.filter(p => p.name !== name);
+            starBtn.classList.remove('favoritado');
+            starBtn.querySelector('img').alt = 'Favoritar';
+        }
+        localStorage.setItem('favoritos', JSON.stringify(lista));
+    });
+
+    return li;
 }
 
+//  -- Limpar e redefinir estado --  //
+function resetarEstado() {
+    cardsList.innerHTML = '';
+    offset = 0;
+    modoPesquisa = false;
+    botaoMais.style.display = 'flex';
+    botaoMais.disabled = false;
+    botaoMais.textContent = 'Carregar Mais ⟳';
+}
 
-
-
-
-//  -- Loading das Listas [de 20 em 20 Pokemons] --  //
-async function carregarLista() {
-  try {
-
-
-    //  Request de um pedaço da API (ex: do 0 ao 20, depois do 20 ao 40...)
-    const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`);
-    const dados = await resposta.json();
-
-
-    //  Para cada Pokémon recebido, crio um card e coloco na lista
-    dados.results.forEach(pokemon => {  cardsList.appendChild(  criarCard(pokemon)  )  });
-
-
-    //  Avanço o offset para a próxima página [tipo, do 0-20 pokemon agora vai do 20-40]
-    offset += limit;
- 
-
-    //  Se não houver mais Pokémon, desativo o botão "carregar mais"
-    if (!dados.next) {
-      botaoMais.disabled = true;
-      botaoMais.textContent = 'Fim';
+//  -- Carregar lista completa (sem filtro) --  //
+async function carregarListaCompleta() {
+    if (modoPesquisa) return;
+    try {
+        const resposta = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`);
+        const dados = await resposta.json();
+        dados.results.forEach(pokemon => {
+            cardsList.appendChild(criarCard(pokemon, false));
+        });
+        offset += limit;
+        if (!dados.next) {
+            botaoMais.disabled = true;
+            botaoMais.textContent = 'Fim';
+        }
+    } catch (erro) {
+        console.error('Erro ao carregar Pokémons:', erro);
+        alert('Não foi possível carregar a lista.');
     }
-  } 
-  catch (erro) {
-    console.error('Erro ao carregar Pokémons:', erro);
-    alert('Não foi possível carregar a lista de Pokémon.');
-  }
 }
 
+//  -- Carregar Pokémon por tipo --  //
+async function carregarPorTipo(tipo) {
+    if (modoPesquisa || tipo === 'all') return;
+    try {
+        const resposta = await fetch(`https://pokeapi.co/api/v2/type/${tipo}/`);
+        const dados = await resposta.json();
 
+        // A API de tipo traz todos de uma vez, então paginamos manualmente
+        const pokemonsDoTipo = dados.pokemon.map(p => p.pokemon);
+        const pagina = pokemonsDoTipo.slice(offset, offset + limit);
 
+        pagina.forEach(pokemon => {
+            cardsList.appendChild(criarCard(pokemon, false));
+        });
 
+        offset += limit;
 
-//  -- Loading das Listas Inicial + Funcao do Botao de Loading das Listas --  //
-carregarLista();
-botaoMais.addEventListener(  'click', carregarLista  );
+        if (offset >= pokemonsDoTipo.length) {
+            botaoMais.disabled = true;
+            botaoMais.textContent = 'Fim';
+        }
+    } catch (erro) {
+        console.error('Erro ao carregar por tipo:', erro);
+        alert('Não foi possível carregar os Pokémon deste tipo.');
+    }
+}
 
+//  -- Voltar à lista completa --  //
+function voltarParaPokedexCompleta() {
+    resetarEstado();
+    tipoAtual = 'all';
+    carregarListaCompleta();
+}
 
+//  -- Exibir resultado único da pesquisa --  //
+async function exibirResultadoUnico(query) {
+    if (!query.trim()) {
+        voltarParaPokedexCompleta();
+        return;
+    }
 
+    try {
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${query.trim().toLowerCase()}`);
+        if (!res.ok) throw new Error('Pokémon não encontrado');
 
+        const data = await res.json();
 
+        resetarEstado();
+        modoPesquisa = true;
+        botaoMais.style.display = 'none';
+        cardsList.appendChild(criarCard(data, true));
+    } catch (err) {
+        alert('Pokémon não encontrado.');
+        voltarParaPokedexCompleta();
+    }
+}
+
+//  -- Tratamento da pesquisa --  //
 function tratamentoDePesquisa() {
-  const busca = inputBar.value.trim();
-
-  if (busca) {
-    const cleanQuery = busca.toLowerCase().trim(); // Deixo tudo minúsculo e tiro espaços
-    searchRedirectPokemons(  cleanQuery  );
-  } 
-
-
-  else {
-    alert('Digite o nome ou ID de um Pokémon!');
-  }
+    const busca = inputBar.value;
+    exibirResultadoUnico(busca);
 }
 
+//  -- Carregar mais (com base no contexto atual) --  //
+function carregarMais() {
+    if (modoPesquisa) return;
+    if (tipoAtual === 'all') {
+        carregarListaCompleta();
+    } else {
+        carregarPorTipo(tipoAtual);
+    }
+}
 
+//  -- Evento de mudança de categoria --  //
+categorySelect.addEventListener('change', () => {
+    const tipoSelecionado = categorySelect.value;
+    tipoAtual = tipoSelecionado;
 
-// Função que trata a pesquisa (quando clica no botão ou aperta Enter)
-searchButton.addEventListener('click', e => {
-  e.preventDefault();
-  tratamentoDePesquisa();
-})
+    resetarEstado();
 
+    if (tipoSelecionado === 'all') {
+        carregarListaCompleta();
+    } else {
+        carregarPorTipo(tipoSelecionado);
+    }
+});
 
+//  -- Eventos de pesquisa --  //
+searchButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    tratamentoDePesquisa();
+});
 
 inputBar.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
+        e.preventDefault();
         tratamentoDePesquisa();
-    };
+    }
 });
+
+//  -- Inicialização --  //
+carregarListaCompleta();
+botaoMais.addEventListener('click', carregarMais);
